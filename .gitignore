@@ -191,6 +191,3 @@ Thumbs.db
 *.db
 *.sqlite
 *.sqlite3
-
-# Prisma
-prisma/migrations/
