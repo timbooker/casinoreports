@@ -9,34 +9,39 @@ datasource db {
 } 
 
 model CasinoGame {
-  id              String       @id @default(uuid())
-  name            String // e.g. 'Live Craps'
-  description     String? // e.g. 'Live Craps is a game of chance where you bet on the outcome of a dice roll.'
-  api_name        String // e.g. 'sweetbonanzacandyland'
-  logo            String? // URL to logo image
-  category        String // 'LIVE STREAMS' | 'TRACKED GAME SHOWS'
-  rtp             String? // Return to Player percentage
-  max_win         Float? // Maximum win multiplier or amount
-  min_stake       Float?
-  max_take        Float? 
-  release_date    String?
-  provider        String?
-  features        Json? @default("[]") // Array of strings e.g. ['Cash Hunt', 'Coin Flip', 'Pachinko', 'Crazy Time']
-  is_new          Boolean      @default(false)
+  id                String       @id @default(uuid())
+  name              String       @unique // e.g. 'Live Craps'
+  description       String? // e.g. 'Live Craps is a game of chance where you bet on the outcome of a dice roll.'
+  api_name          String       @unique // e.g. 'sweetbonanzacandyland'
+  logo              String? // URL to logo image
+  category          String // 'LIVE STREAMS' | 'TRACKED GAME SHOWS'
+  rtp               String? // Return to Player percentage
+  max_win           Float? // Maximum win multiplier or amount
+  min_stake         Float?
+  max_take          Float? 
+  release_date      String?
+  provider          String?
+  features          Json?        @default("[]") // Array of strings e.g. ['Cash Hunt', 'Coin Flip', 'Pachinko', 'Crazy Time']
+  is_new            Boolean      @default(false)
   fetch_results_url String? // URL to fetch results for this game
-  created_at      DateTime     @default(now())
-  updated_at      DateTime     @updatedAt
-  results         GameResult[]
+  created_at        DateTime     @default(now())
+  updated_at        DateTime     @updatedAt
+  results           GameResult[]
 }
 
 model GameResult {
-  id           String     @id @default(uuid())
-  externalId   String // id from the API
-  startedAt    DateTime
-  settledAt    DateTime
-  status       String
-  result       Json
-  casinoGameId String
-  casinoGame   CasinoGame @relation(fields: [casinoGameId], references: [id])
-  createdAt    DateTime   @default(now())
+  id             String     @id @default(uuid())
+  external_id    String     @unique // External id from the API
+  started_at     DateTime
+  settled_at     DateTime
+  status         String
+  result         Json
+  total_winners  Int
+  total_amount   Float
+  winners        Json
+  data_raw       Json
+  casino_game_id String
+  casino_game    CasinoGame @relation(fields: [casino_game_id], references: [id])
+  created_at     DateTime   @default(now())
+  updated_at     DateTime   @updatedAt
 }
