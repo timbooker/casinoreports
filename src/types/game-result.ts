@@ -1,6 +1,9 @@
 export interface GameResult {
     id: string;
     data: GameData;
+    totalWinners: number;
+    totalAmount: number;
+    winners: Winner[];
 }
 
 export interface GameData {
@@ -10,12 +13,32 @@ export interface GameData {
     status: string;
     gameType: string;
     table: Table;
-    result: Record<string, any>;
+    result: GameResultData;
 }
 
 export interface Table {
     id: string;
     name: string;
+}
+
+export interface GameResultData {
+    luckyNumbers: Record<string, number[]>;
+    luckyNumbersList: LuckyNumber[];
+    first: number;
+    second: number;
+    third: number;
+    value: string;
+    total: number;
+}
+
+export interface LuckyNumber {
+    outcome: string;
+    multiplier: number;
+}
+
+export interface Winner {
+    screenName: string;
+    winnings: number;
 }
 
 export interface WheelResult {
