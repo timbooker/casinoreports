@@ -65,12 +65,40 @@ const swaggerOptions = {
                 CasinoGame: {
                     type: "object",
                     properties: {
-                        id: { type: "string" },
-                        name: { type: "string" },
-                        type: { type: "string" },
-                        provider: { type: "string" },
-                        createdAt: { type: "string", format: "date-time" },
-                        updatedAt: { type: "string", format: "date-time" }
+                        id: { type: "string", description: "Unique identifier for the casino game" },
+                        name: { type: "string", description: "Display name of the game (e.g. 'Live Craps')" },
+                        description: { type: "string", nullable: true, description: "Game description" },
+                        api_name: {
+                            type: "string",
+                            description: "API identifier for the game (e.g. 'sweetbonanzacandyland')"
+                        },
+                        logo: { type: "string", nullable: true, description: "URL to logo image" },
+                        category: {
+                            type: "string",
+                            enum: ["LIVE STREAMS", "TRACKED GAME SHOWS"],
+                            description: "Game category"
+                        },
+                        rtp: { type: "string", nullable: true, description: "Return to Player percentage" },
+                        max_win: { type: "number", nullable: true, description: "Maximum win multiplier or amount" },
+                        min_stake: { type: "number", nullable: true, description: "Minimum stake amount" },
+                        max_take: { type: "number", nullable: true, description: "Maximum take amount" },
+                        release_date: { type: "string", nullable: true, description: "Game release date" },
+                        provider: { type: "string", nullable: true, description: "Game provider" },
+                        features: {
+                            type: "array",
+                            nullable: true,
+                            items: { type: "string" },
+                            description:
+                                "Array of game features (e.g. ['Cash Hunt', 'Coin Flip', 'Pachinko', 'Crazy Time'])"
+                        },
+                        is_new: { type: "boolean", description: "Whether the game is new", default: false },
+                        fetch_results_url: {
+                            type: "string",
+                            nullable: true,
+                            description: "URL to fetch results for this game"
+                        },
+                        created_at: { type: "string", format: "date-time", description: "Creation timestamp" },
+                        updated_at: { type: "string", format: "date-time", description: "Last update timestamp" }
                     }
                 },
                 CacheStatus: {
