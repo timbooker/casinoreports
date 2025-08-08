@@ -3,246 +3,543 @@
         "name": "Crazy Time",
         "apiName": "crazy-time",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_60,c_scale,c_crop,h_153,w_190/CasinoScores/crazy-time-thumbnail.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Crazy Time by Evolution is the world's most popular online casino game show. The game features a Money Wheel, a Top Slot for added multipliers, and four exciting bonus games.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "95.41%",
+        "features": ["Cash Hunt Bonus", "Pachinko Bonus", "Coin Flip Bonus", "Crazy Time Bonus"]
     },
     {
         "name": "Ice Fishing",
         "apiName": "ice-fishing",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/ice-fishing/logo-ice-fishing.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Ice Fishing Live is Evolution’s latest live casino game show, combining a fortune wheel mechanic with immersive, theme-driven bonus rounds.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": true,
+        "release_date": "Expected August 2025",
+        "rtp": "Not officially confirmed",
+        "features": ["Lil' Blues Bonus", "Big Oranges Bonus", "Huge Reds Bonus"]
     },
     {
         "name": "Monopoly Live",
         "apiName": "monopoly-live",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_200,f_auto,q_auto,c_scale/CasinoScores/Monopoly%20Live/monopoly-live-thumbnail-2.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Monopoly Live is another take on the popular money wheel game Dreamcatcher from Evolution, featuring a bonus game on a 3D Monopoly board.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Chance Card Feature", "2 ROLLS Bonus Game", "4 ROLLS Bonus Game"]
     },
     {
         "name": "Lightning Storm",
         "apiName": "lightning-storm",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1721032732/lightning-storm/lightning-storm-logo-min.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "The main objective of Lightning Storm is to predict the segment on which the wheel will stop. The segments can either provide instant payouts or lead to one of the five bonus games.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "97.44%",
+        "features": [
+            "Hot Spot Bonus",
+            "Monster Mash Bonus",
+            "Battery Charger Bonus",
+            "Fireball Bonus",
+            "Lightning Storm Bonus"
+        ]
     },
     {
         "name": "Adventures Beyond Wonderland",
         "apiName": "adventures-beyond-wonderland",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Adventures%20Beyond%20Wonderland/adventures-beyond-wonderland-logo.png",
-        "provider": "playtech"
+        "provider": "playtech",
+        "description": "This live dealer game from Playtech allows players to meet up virtually with the Mad Hatter, Alice, the White Rabbit, and more of the crazy characters, as well as win cash prizes.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Four Bonus Rounds", "Two Mystery Symbols", "Live Dealers in Costume"]
     },
     {
         "name": "Monopoly Big Baller",
         "apiName": "monopoly-big-baller",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/MonopolyBigBaller/monopoly-big-baller-logo-thumbnail.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "MONOPOLY Big Baller marries the popular game show MONOPOLY Live with the lottery success Megaball. Play a bingo-style game with a live host and Mr. MONOPOLY himself.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "96.10%",
+        "features": ["Chance / Free Space Cards", "3 and 5 Rolls Bonus Cards", "Three Multiplier Types"]
     },
     {
         "name": "Sweet Bonanza Candyland",
         "apiName": "sweet-bonanza-candyland",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Sweet%20Bonanza%20Candyland/sweet_bonanza_candyland_logo-min-compressed.png",
-        "provider": "pragmatic-play"
+        "provider": "pragmatic-play",
+        "description": "Sweet Bonanza Candyland offers a visually rich, candy-themed adventure, combining the thrill of real-time gaming with the convenience of online play.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "96.95%",
+        "features": ["Sugar Bomb", "Bubble Surprise", "Candy Drop Bonus", "Sweet Spins Bonus"]
     },
     {
         "name": "Fortune Roulette",
         "apiName": "fortune-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/fortune-roulette/fortune-roulette-logo-min.png",
-        "provider": "pragmatic-play"
+        "provider": "pragmatic-play",
+        "description": "Pragmatic Studios' Fortune Roulette is a clear competitor to games like Fireball Roulette and Lightning Roulette. It is a standard European Roulette table with added excitement.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": true,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Fortune Multipliers", "Chest Feature", "Bonus Game"]
     },
     {
         "name": "Lightning Bac Bo",
         "apiName": "lightning-bac-bo",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,c_scale,w_auto/lightning-bac-bo/lightning-bac-bo-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Lightning Bac Bo is Evolution’s fast-paced, dice-driven twist on Baccarat, where every round delivers guaranteed Lightning multipliers between 2x and 8x.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "98.87% (Player/Banker), 95.52% (Tie)",
+        "features": [
+            "Guaranteed Lightning Multipliers (2x-8x)",
+            "Dice-based gameplay",
+            "Tie bet with high potential payout"
+        ]
     },
     {
         "name": "Treasure Island",
         "apiName": "treasure-island",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,c_scale/Treasure%20Island/treasure-island-logo.png",
-        "provider": "pragmatic-play"
+        "provider": "pragmatic-play",
+        "description": null,
+        "category": "TRACKED GAME SHOWS",
+        "is_new": true,
+        "release_date": null,
+        "rtp": null,
+        "features": null
     },
     {
         "name": "Super Color Game",
         "apiName": "super-color-game",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/super-color-game/super-color-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Super Color Game is a new live casino game by Evolution that features three six-sided dice in yellow, white, pink, blue, red, and green. You predict which colors or combinations will land face-up.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "95.62%",
+        "features": [
+            "Three six-sided colored dice",
+            "Single, Double, and Triple bets",
+            "Up to 18 multipliers applied per round"
+        ]
     },
     {
         "name": "Dream Catcher",
         "apiName": "dream-catcher",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/dreamcatcher.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Dream Catcher is an innovative and captivating live casino game that blends the simplicity of a money wheel with the excitement of real-time interactive gameplay.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "96.58%",
+        "features": ["Large vertical money wheel", "2x and 7x win multiplier segments", "Live host interaction"]
     },
     {
         "name": "Marble Race",
         "apiName": "marble-race",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,w_auto,c_scale/Marble%20Race/marble-race-logo-min.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Marble Race is a fast-paced, visually engaging betting game that blends colour, movement, and unpredictability. Six marbles in different colours race down an obstacle-filled track.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "95.83% (1st Place), 93.33% (1st & 2nd)",
+        "features": ["Six colored marbles race", "Obstacle-filled track", "Bet on 1st place or 1st & 2nd place"]
     },
     {
         "name": "Speed Baccarat A",
         "apiName": "speed-baccarat-a",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,w_auto,c_scale/Speed%20Baccarat/speed-baccarat-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "This baccarat variant combines traditional rules with lightning-fast gameplay and features rounds lasting less than 30 seconds.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "Up to 98.94%",
+        "features": ["Fast-paced rounds (under 30s)", "High RTP", "Side bets like Perfect Pairs"]
     },
     {
         "name": "Super Andar Bahar",
         "apiName": "super-andar-bahar",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Andar%20Bahar/super-andar-bahar-logo-min.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "The objective is to predict whether the card that appears first on the Andar (inside) or Bahar (outside) side will match the rank of the 'Joker' card.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Based on traditional Indian card game", "Side bets on number of cards", "Random multipliers"]
     },
     {
         "name": "Crazy Balls",
         "apiName": "crazy-balls",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/crazy-balls/crazy_balls_logo_1__new.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Crazy Balls Live Video has 60 numbered balls launched from a bingo machine. When the game begins, only 20 numbered balls shoot out, striking off similar numbers from your eight cards.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "95.54% - 96.49%",
+        "features": ["Bingo-style gameplay", "Four bonus rounds from Crazy Time", "Three types of multipliers"]
     },
     {
         "name": "Bac Bo",
         "apiName": "bac-bo",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1740479979/Bac%20Bo/bac-bo-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Bac Bo replaces familiar cards from baccarat with four dice placed in an individual automatic shaker set in an Asian theme. The final result is the sum of each side's two dice.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": [
+            "Combination of Baccarat and Sic Bo",
+            "Uses dice instead of cards",
+            "Tie bet with high potential payout"
+        ]
     },
     {
         "name": "Lightning Dice",
         "apiName": "lightning-dice",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/lightning-dice/lightning-dice-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Lightning Dice brings a fresh twist to the classic dice game by incorporating dynamic gameplay and impressive win multipliers up to 1,000x.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": [
+            "Three dice rolled in a 'Lightning Tower'",
+            "Random Lightning Multipliers (up to 1,000x)",
+            "Interactive Interface"
+        ]
     },
     {
         "name": "Auto Roulette",
         "apiName": "auto-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/auto-roulette/auto-roulette-logo_1.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Auto Roulette by Evolution Gaming is a streamlined version of classic roulette that operates seamlessly without a live dealer, offering players constant action with rapid rounds.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "97.30%",
+        "features": ["Automated wheel, no dealer", "Fast-paced rounds", "Available 24/7"]
     },
     {
         "name": "Fireball Roulette",
         "apiName": "fireball-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1746474611/Fireball%20Roulette/fireball-roulette-logo-min.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Evolution Fireball Roulette is a classic European Roulette with a twist. A Straight up bet is required to trigger the Bonus game.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "97.00% (Straight Up), 97.30% (Other)",
+        "features": ["Fireball Bonus Round", "Fireball Chaser Bet", "Multipliers up to 2,500x in bonus"]
     },
     {
         "name": "Super Sic Bo",
         "apiName": "super-sic-bo",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/SuperSicBo/superSicBoLogoo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Super Sic Bo is one of Evolution Gaming’s most popular games, utilising live dice rolls and fantastic multipliers.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "Up to 97.22%",
+        "features": ["Live dice rolls", "Random multipliers up to 999x", "Wide range of betting options"]
     },
     {
         "name": "Funky Time",
         "apiName": "funky-time",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,c_scale/CasinoScores/Funky%20Time/funky_time_logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "The game features a one-of-a-kind DigiWheel and a different set of bonus rounds, including BAR, Stayin' Alive, Disco, and VIP Disco.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["DigiWheel", "BAR Bonus", "Stayin' Alive Bonus", "Disco Bonus", "VIP Disco Bonus"]
     },
     {
         "name": "Mega Roulette",
         "apiName": "mega-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Mega%20Roulette/mega-roulette-logo.png",
-        "provider": "pragmatic-play"
+        "provider": "pragmatic-play",
+        "description": "Mega Roulette by Pragmatic Play delivers an extra twist on the classic gameplay, with multipliers and the chance to win even bigger payouts.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Up to five random multipliers per spin", "Multipliers from 50x to 500x", "Live dealer format"]
     },
     {
         "name": "Mega Wheel",
         "apiName": "mega-wheel",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/mega_wheel_logo.png",
-        "provider": "pragmatic-play"
+        "provider": "pragmatic-play",
+        "description": "A live dealer game that offers exciting prizes, Mega Wheel is easy for anyone to play. The aim is for players to correctly predict where the wheel will land on every spin.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["54-segment prize wheel", "Random multiplier up to 500x on every spin", "Live host"]
     },
     {
         "name": "Lightning Roulette",
         "apiName": "lightning-roulette",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/lightning-roulette-thumbnail.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Lightning Roulette is similar to standard roulette games with additional features including Lucky Numbers and Lucky Payouts.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Lucky Numbers with multipliers", "Lucky Payouts from 50x to 500x", "Straight up bet pays 30:1"]
     },
     {
         "name": "XXXTreme Lightning Roulette",
         "apiName": "xxxtreme-lightning-roulette",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/logo-xxxtreme-lightning-roulette.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "XXXTreme Lightning Roulette is the extreme version of the original Lightning Roulette, with the potential to win up to 2,000x your bet.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["Multipliers up to 2,000x", "Chain Lightning feature", "One to five lightning numbers per round"]
     },
     {
         "name": "Red Door Roulette",
         "apiName": "red-door-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/cms-dev/red_door_roulette_logo_eng_2023_08_7800567d54_1_e3966a2f60.svg",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "This new offering from Evolution Gaming brilliantly merges the award-winning Lightning Roulette with the suspense of Crazy Time’s Bonus game.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": "November 8th, 2023",
+        "rtp": "97.30%",
+        "features": ["3-15 Bonus Numbers per round", "Crazy Time Bonus game", "Random multipliers up to 20x"]
     },
     {
         "name": "Gold Vault Roulette",
         "apiName": "gold-vault-roulette",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/GoldVaultRoulette/gold-vault-roulette-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": null,
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": null
     },
     {
         "name": "Crazy Coin Flip",
         "apiName": "crazy-coin-flip",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,f_auto,q_auto,c_scale,h_373,w_457/Coin%20Flip%20Images/ccf-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Crazy Coin Flip is a RNG slot / Live Casino hybrid from Evolution, with two video slot rounds, and one live game show round with the popular coin flip made popular in Crazy Time.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": ["RNG Slot qualifying round", "Live Coin Flip bonus round", "XXXTreme spin modes"]
     },
     {
         "name": "Immersive Roulette",
         "apiName": "immersive-roulette",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-immersive-roulette.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "A unique high quality game with full HD view of the roulette wheel from multiple angles, as well as close-ups of the presenter.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": "2013",
+        "rtp": "97.3%",
+        "features": ["Multi-camera visuals", "Slow motion replay feature", "200 frames per second HD video"]
     },
     {
         "name": "Lightning Baccarat",
         "apiName": "lightning-baccarat",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-lightning-baccarat.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Classic baccarat enhanced with high-payout RNG multipliers. In every round, 1 to 5 randomly generated Lightning Cards appear, adding multipliers from 2x to 8x.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": "2020",
+        "rtp": "98.76% (Player)",
+        "features": ["Lightning Round with multipliers", "Multipliers up to 512x", "20% Lightning Fee"]
     },
     {
         "name": "Cash or Crash Live",
         "apiName": "cash-or-crash-live",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/cash-or-crash-thumbnail.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "The goal of the game is to climb a 20-step ladder-style paytable as high as you can, chasing a max win of up to 50,000 times your stake.",
+        "category": "TRACKED GAME SHOWS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "99.59%",
+        "features": [
+            "20-step paytable ladder",
+            "Green, Red, and Gold ball mechanics",
+            "Strategic choices: continue, take half, or take all"
+        ]
     },
     {
         "name": "Fan Tan Live",
         "apiName": "fan-tan-live",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-fan-tan.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Fan Tan is an ancient Asian game where players predict the amount of remaining beads at the end of the game round after being sorted into groups of four.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "96.25% - 98.75%",
+        "features": [
+            "Based on ancient Asian game",
+            "Standard and Advanced betting modes",
+            "Multiple bet types (Nim, Kwok, Ssh)"
+        ]
     },
     {
         "name": "War Live",
         "apiName": "war-live",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/cms-prod/logoevo_war_77df58e424.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Evolution War is a modern take on the classic Casino War card game. You and the dealer each receive a card, and the higher card wins.",
+        "category": "LIVE STREAMS",
+        "is_new": true,
+        "release_date": null,
+        "rtp": "96.27% - 96.56%",
+        "features": ["Simple 'higher card wins' rule", "Go To War on a Tie", "Side bet on a Tie result"]
     },
     {
         "name": "Mega Ball",
         "apiName": "mega-ball",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/mega-ball.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Mega Ball by Evolution Gaming is a Live casino game show which features up to 2 Mega Ball bonus rounds, combining mechanics of lottery and bingo.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "95.50%",
+        "features": [
+            "Bingo/Lottery hybrid",
+            "Mega Ball bonus round with 5x-100x multiplier",
+            "Purchase up to 200 cards per round"
+        ]
     },
     {
         "name": "Free Bet Blackjack",
         "apiName": "free-bet-blackjack",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-free-bet-blackjack.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Based on popular land-based Blackjack, it includes the added attraction of selected free Double Down and Split Bets.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "98.45%",
+        "features": [
+            "Free Double Down bets on 9, 10, 11",
+            "Free Split bets on pairs (except 10s)",
+            "Four optional side bets",
+            "Unlimited seating"
+        ]
     },
     {
         "name": "Extra Chilli Epic Spins",
         "apiName": "extra-chilli-epic-spins",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Extra%20Chilli%20Epic%20Spins/extra-chilli-epic-spins.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Evolution presents Extra Chilli Epic Spins, bringing the popular Megaways mechanic from Big Time Gaming to the live game show studio.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": [
+            "Megaways slot mechanic",
+            "Piñata feature with multipliers or bonus triggers",
+            "Gamble Wheels to win extra free spins"
+        ]
     },
     {
         "name": "Video Poker",
         "apiName": "video-poker",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/video-poker/video_poker_logo-min.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "Evolution Video Poker Live brings the excitement of classic video poker with a twist of real-time live video gameplay.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": "97% - 99%",
+        "features": [
+            "Play up to 100 hands at once",
+            "Multiple variations (Jacks or Better, Deuces Wild, etc.)",
+            "First-Person mode available"
+        ]
     },
     {
         "name": "Imperial Quest",
         "apiName": "imperial-quest",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Imperial%20Quest/imperial-quest-thumbnail.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": "A reskin of Dream Catcher with an Eastern theme, this game delivers high production quality and thrilling gameplay with win multipliers and fun, professional hosts.",
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": [
+            "Asian-themed money wheel",
+            "2x and 7x win multiplier segments",
+            "Potential combined multiplier up to 20,000x"
+        ]
     },
     {
         "name": "Dead or Alive Saloon",
         "apiName": "dead-or-alive-saloon",
         "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Dead%20Or%20Alive%20-%20Salon/dead-or-alive-logo.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": null,
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": null
     },
     {
         "name": "Live Craps",
         "apiName": "live-craps",
         "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/craps-live.png",
-        "provider": "evolution"
+        "provider": "evolution",
+        "description": null,
+        "category": "LIVE STREAMS",
+        "is_new": false,
+        "release_date": null,
+        "rtp": null,
+        "features": null
     }
 ]

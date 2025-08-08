@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,20 +9,21 @@ datasource db {
 
 model CasinoGame {
   id              String       @id @default(uuid())
-  name            String
-  apiName         String // e.g. 'sweetbonanzacandyland'
-  tableId         String?
-  logo            String? // URL to logo image
-  rtp             Float? // Return to Player percentage
-  maxWin          Float? // Maximum win multiplier or amount
-  minStake        Float?
-  maxStake        Float?
-  releaseYear     Int?
-  provider        String?
-  specialFeatures String? // e.g. 'Cash Hunt, Coin Flip, Pachinko, Crazy Time'
+  name            String // e.g. 'Live Craps'
   description     String?
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
+  api_name        String // e.g. 'sweetbonanzacandyland'
+  logo            String? // URL to logo image
+  category        String // 'LIVE STREAMS' | 'TRACKED GAME SHOWS'
+  rtp             String? // Return to Player percentage
+  max_win         Float? // Maximum win multiplier or amount
+  min_stake       Float?
+  max_take        Float?
+  release_date    String?
+  provider        String?
+  features        Json? @default("[]") // Array of strings e.g. ['Cash Hunt', 'Coin Flip', 'Pachinko', 'Crazy Time']
+  is_new          Boolean      @default(false)
+  created_at      DateTime     @default(now())
+  updated_at      DateTime     @updatedAt
   results         GameResult[]
 }
 
