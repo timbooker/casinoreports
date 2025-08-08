@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client";
 import cmsDocuments from "../payload/cms/documents1.json";
 import navMenu from "../payload/cms/menu.json";
 import { GamesRouter } from "./games.route";
+import BiggestWinsRouter from "./biggest-wins.route";
 
 const router = Router();
 const cache = getCacheProvider();
@@ -54,6 +55,7 @@ async function cacheAndFetch(
 }
 
 router.use(GamesRouter);
+router.use(BiggestWinsRouter);
 
 /**
  * @swagger
