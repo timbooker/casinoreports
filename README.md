@@ -33,22 +33,26 @@ A comprehensive API for tracking casino games, player data, and game results wit
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <your-repo-url>
 cd casino-tracker
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.example .env
 ```
 
 4. Configure your environment variables in `.env`:
+
 ```env
 # Server Configuration
 PORT=3000
@@ -67,17 +71,20 @@ GAME_RESULTS_CACHE_SECONDS=30
 ```
 
 5. Set up the database:
+
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
 6. Start the development server:
+
 ```bash
 npm run dev
 ```
 
 For production:
+
 ```bash
 npm run build
 npm start
@@ -94,12 +101,15 @@ Once the server is running, you can access the interactive Swagger documentation
 ### Available Endpoints
 
 #### Geolocation
+
 - `GET /api/geo/identify` - Identify user location based on IP
 
 #### Player Data
+
 - `GET /api/playercount/latest` - Get current player count
 
 #### Game Results
+
 - `GET /api/halloffame/latest` - Get latest hall of fame entries
 - `GET /api/crazytime/results` - Get Crazy Time game results
 - `GET /api/treasureisland/results` - Get Treasure Island game results
@@ -110,14 +120,17 @@ Once the server is running, you can access the interactive Swagger documentation
 - `GET /api/sweetbonanza/results` - Get Sweet Bonanza game results
 
 #### CMS
+
 - `GET /api/menu` - Get navigation menu
 - `GET /api/cms/documents` - Get CMS documents
 
 #### Casino Games Database
+
 - `GET /api/games` - Get all casino games
 - `GET /api/games/:id` - Get a specific casino game
 
 #### System
+
 - `GET /api/cache/status` - Get cache configuration and status
 
 ## Project Structure
@@ -165,6 +178,51 @@ npx prisma migrate deploy
 npx prisma migrate reset
 ```
 
+### Database Seeding
+
+The application includes a seed script that automatically populates the database with casino games data from `src/payload/games.json`.
+
+#### Automatic Seeding
+
+The database is automatically seeded when the application starts if no games exist in the database.
+
+#### Manual Seeding
+
+To manually seed the database:
+
+```bash
+# Run the seed script
+npm run seed
+
+# Or using Prisma directly
+npx prisma db seed
+```
+
+#### Seed Data
+
+The seed script populates the following data:
+
+- **41 casino games** including Crazy Time, Monopoly Live, Lightning Storm, and more
+- **Game details** including names, descriptions, logos, providers, categories, and features
+- **Fetch URLs** for each game to retrieve results
+- **Game metadata** such as RTP, release dates, and new game flags
+
+The seed data is sourced from `src/payload/games.json` and includes:
+
+- Game names and API identifiers
+- Provider information (Evolution, Pragmatic Play, etc.)
+- Game categories (LIVE STREAMS, TRACKED GAME SHOWS)
+- Feature lists and descriptions
+- Logo URLs and metadata
+- Fetch URLs for game results
+
+#### Seed Script Features
+
+- **Idempotent**: Won't duplicate data if run multiple times
+- **Error handling**: Continues seeding even if individual games fail
+- **Logging**: Provides detailed feedback during seeding process
+- **Automatic startup**: Runs automatically when the application starts
+
 ## Configuration
 
 ### Cache Configuration
@@ -175,6 +233,7 @@ The application supports two cache providers:
 2. **Redis Cache**: Distributed caching with Redis
 
 To use Redis, set the following environment variables:
+
 ```env
 CACHE_PROVIDER=redis
 REDIS_URL=redis://localhost:6379
@@ -193,16 +252,19 @@ GAME_RESULTS_CACHE_SECONDS=30
 ## API Examples
 
 ### Get Player Count
+
 ```bash
 curl http://localhost:3000/api/playercount/latest
 ```
 
 ### Get Crazy Time Results
+
 ```bash
 curl http://localhost:3000/api/crazytime/results
 ```
 
 ### Identify Location
+
 ```bash
 # Automatically detects client IP address
 curl "http://localhost:3000/api/geo/identify"
@@ -223,4 +285,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support and questions, please open an issue in the GitHub repository. # Force deployment update - Fri Jul 25 17:12:02 CEST 2025
-

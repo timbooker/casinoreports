@@ -7,7 +7,8 @@
         "dev": "ts-node src/index.ts",
         "build": "tsc",
         "postinstall": "npm run build",
-        "format": "prettier --write \"src/**/*.ts\""
+        "format": "prettier --write \"src/**/*.ts\"",
+        "seed": "ts-node prisma/seed.ts"
     },
     "dependencies": {
         "@prisma/client": "^6.13.0",
