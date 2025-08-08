@@ -24,12 +24,10 @@ const swaggerOptions = {
             }
         },
         servers: [
-            // TODO: Uncomment this when developing locally
-
-            // {
-            //   url: 'https://casino-tracker-api.onrender.com',
-            //   description: 'Production server'
-            // },
+            {
+                url: "https://casino-tracker-api.onrender.com",
+                description: "Production server"
+            },
             {
                 url: `http://localhost:${PORT}`,
                 description: "Development server"

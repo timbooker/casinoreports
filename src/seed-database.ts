@@ -22,7 +22,6 @@ export async function seedDatabase() {
     try {
         console.log("🌱 Checking if database needs seeding...");
 
-        // Check if we already have games in the database
         const existingGamesCount = await prisma.casinoGame.count();
 
         if (existingGamesCount > 0) {
@@ -32,13 +31,11 @@ export async function seedDatabase() {
 
         console.log("📊 No existing games found, starting seed...");
 
-        // Read the games.json file
         const gamesPath = path.join(__dirname, "payload", "games.json");
         const gamesData: GameData[] = JSON.parse(fs.readFileSync(gamesPath, "utf8"));
 
         console.log(`📊 Found ${gamesData.length} games to seed`);
 
-        // Insert the games
         let createdCount = 0;
         for (const gameData of gamesData) {
             try {
