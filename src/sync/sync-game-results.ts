@@ -40,11 +40,14 @@ async function syncGameResults() {
   for (const game of GAME_CONFIGS) {
     try {
       const casinoGame = await prisma.casinoGame.findFirst({ where: { apiName: game.apiName } });
+
       if (!casinoGame) {
         console.warn(`CasinoGame not found for apiName: ${game.apiName}`);
         continue;
       }
+      
       const { data } = await axios.get(game.url);
+      
       for (const result of data) {
         // Find or create GameResult by externalId and casinoGameId
         let gameResult = await prisma.gameResult.findFirst({
