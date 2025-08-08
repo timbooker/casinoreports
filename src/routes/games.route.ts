@@ -1,6 +1,6 @@
-import { Request, Response } from 'express';
-import { Router } from 'express';
-import { PrismaClient } from '@prisma/client';
+import { Request, Response } from "express";
+import { Router } from "express";
+import { PrismaClient } from "@prisma/client";
 
 export const GamesRouter = Router();
 const prisma = new PrismaClient();
@@ -31,17 +31,17 @@ const prisma = new PrismaClient();
  *                 error:
  *                   type: string
  */
-GamesRouter.get('/games', async (_req: Request, res: Response) => {
+GamesRouter.get("/games", async (_req: Request, res: Response) => {
     try {
-      const games = await prisma.casinoGame.findMany();
-      res.json(games);
+        const games = await prisma.casinoGame.findMany();
+        res.json(games);
     } catch (error) {
-      console.error('Error fetching casino games:', error);
-      res.status(500).json({ error: 'Failed to fetch casino games.' });
+        console.error("Error fetching casino games:", error);
+        res.status(500).json({ error: "Failed to fetch casino games." });
     }
-  });
+});
 
-  /**
+/**
  * @swagger
  * /api/games/{id}:
  *   get:
@@ -81,20 +81,20 @@ GamesRouter.get('/games', async (_req: Request, res: Response) => {
  *                 error:
  *                   type: string
  */
-GamesRouter.get('/games/:id', async (req: Request, res: Response) => {
+GamesRouter.get("/games/:id", async (req: Request, res: Response) => {
     try {
-      const game = await prisma.casinoGame.findUnique({ where: { id: req.params.id } });
+        const game = await prisma.casinoGame.findUnique({ where: { id: req.params.id } });
 
-      if (!game) {
-        res.status(404).json({ error: 'Casino game not found.' });
-        return;
-      }
-      
-      res.json(game);
+        if (!game) {
+            res.status(404).json({ error: "Casino game not found." });
+            return;
+        }
+
+        res.json(game);
     } catch (error) {
-      console.error('Error fetching casino game:', error);
-      res.status(500).json({ error: 'Failed to fetch casino game.' });
+        console.error("Error fetching casino game:", error);
+        res.status(500).json({ error: "Failed to fetch casino game." });
     }
-  });
+});
 
 export default GamesRouter;
