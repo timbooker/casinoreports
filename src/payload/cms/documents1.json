@@ -1,0 +1,458 @@
+{
+    "data": [
+        {
+            "id": 154,
+            "attributes": {
+                "title": "Best Crazy Time Casinos",
+                "readDurationMin": 4,
+                "createdAt": "2025-07-10T09:00:56.275Z",
+                "updatedAt": "2025-07-10T10:10:09.615Z",
+                "publishedAt": "2025-07-10T09:02:07.449Z",
+                "locale": "en",
+                "isHighlighted": false,
+                "slug": "best-crazy-time-casinos",
+                "seo": {
+                    "id": 175,
+                    "allowIndex": true,
+                    "allowFollow": true,
+                    "description": "Discover the top online casinos for Evolution Gaming's Crazy Time. Find safe, licensed sites with great bonuses & tips to play responsibly.",
+                    "metatitle": "Evolution Crazy Time: Find Top Online Casinos",
+                    "bg_img": {
+                        "data": {
+                            "id": 109,
+                            "attributes": {
+                                "name": "header-bg-ct-best-casinos.jpg",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1441,
+                                "height": 447,
+                                "formats": {
+                                    "large": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142190/cms-prod/large_header_bg_ct_best_casinos_8b4529c1d3.jpg",
+                                        "hash": "large_header_bg_ct_best_casinos_8b4529c1d3",
+                                        "mime": "image/jpeg",
+                                        "name": "large_header-bg-ct-best-casinos.jpg",
+                                        "path": null,
+                                        "size": 31.37,
+                                        "width": 1000,
+                                        "height": 310,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/large_header_bg_ct_best_casinos_8b4529c1d3",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "small": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142190/cms-prod/small_header_bg_ct_best_casinos_8b4529c1d3.jpg",
+                                        "hash": "small_header_bg_ct_best_casinos_8b4529c1d3",
+                                        "mime": "image/jpeg",
+                                        "name": "small_header-bg-ct-best-casinos.jpg",
+                                        "path": null,
+                                        "size": 11.69,
+                                        "width": 500,
+                                        "height": 155,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/small_header_bg_ct_best_casinos_8b4529c1d3",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "medium": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142190/cms-prod/medium_header_bg_ct_best_casinos_8b4529c1d3.jpg",
+                                        "hash": "medium_header_bg_ct_best_casinos_8b4529c1d3",
+                                        "mime": "image/jpeg",
+                                        "name": "medium_header-bg-ct-best-casinos.jpg",
+                                        "path": null,
+                                        "size": 20.92,
+                                        "width": 750,
+                                        "height": 233,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/medium_header_bg_ct_best_casinos_8b4529c1d3",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "thumbnail": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142190/cms-prod/thumbnail_header_bg_ct_best_casinos_8b4529c1d3.jpg",
+                                        "hash": "thumbnail_header_bg_ct_best_casinos_8b4529c1d3",
+                                        "mime": "image/jpeg",
+                                        "name": "thumbnail_header-bg-ct-best-casinos.jpg",
+                                        "path": null,
+                                        "size": 4.03,
+                                        "width": 245,
+                                        "height": 76,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_header_bg_ct_best_casinos_8b4529c1d3",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "header_bg_ct_best_casinos_8b4529c1d3",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "size": 52,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142190/cms-prod/header_bg_ct_best_casinos_8b4529c1d3.jpg",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/header_bg_ct_best_casinos_8b4529c1d3",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2025-07-10T10:09:51.147Z",
+                                "updatedAt": "2025-07-10T10:09:51.147Z"
+                            }
+                        }
+                    },
+                    "thumbnail_img": {
+                        "data": {
+                            "id": 110,
+                            "attributes": {
+                                "name": "logo-ct-best-casinos.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 457,
+                                "height": 373,
+                                "formats": {
+                                    "thumbnail": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142203/cms-prod/thumbnail_logo_ct_best_casinos_8c0eeb0eac.png",
+                                        "hash": "thumbnail_logo_ct_best_casinos_8c0eeb0eac",
+                                        "mime": "image/png",
+                                        "name": "thumbnail_logo-ct-best-casinos.png",
+                                        "path": null,
+                                        "size": 41.65,
+                                        "width": 191,
+                                        "height": 156,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_logo_ct_best_casinos_8c0eeb0eac",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "logo_ct_best_casinos_8c0eeb0eac",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 26.56,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1752142202/cms-prod/logo_ct_best_casinos_8c0eeb0eac.png",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/logo_ct_best_casinos_8c0eeb0eac",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2025-07-10T10:10:04.012Z",
+                                "updatedAt": "2025-07-10T10:10:04.012Z"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 152,
+            "attributes": {
+                "title": "Now Live! Marble Race Live Stats and Live Video on CasinoScores",
+                "readDurationMin": 2,
+                "createdAt": "2025-04-10T10:14:36.552Z",
+                "updatedAt": "2025-04-17T12:01:56.409Z",
+                "publishedAt": "2025-04-10T10:17:16.360Z",
+                "locale": "en",
+                "isHighlighted": false,
+                "slug": "coming-soon-evolution-marble-race",
+                "seo": {
+                    "id": 172,
+                    "allowIndex": true,
+                    "allowFollow": true,
+                    "description": null,
+                    "metatitle": "Marble Race Live Stats and video Coming soon to CasinoScores! ",
+                    "bg_img": {
+                        "data": {
+                            "id": 105,
+                            "attributes": {
+                                "name": "marble_race_image_2025_03_09_ei9v43.jpg",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1440,
+                                "height": 447,
+                                "formats": {
+                                    "large": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280401/cms-prod/large_marble_race_image_2025_03_09_ei9v43_1ff40835a7.jpg",
+                                        "hash": "large_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                        "mime": "image/jpeg",
+                                        "name": "large_marble_race_image_2025_03_09_ei9v43.jpg",
+                                        "path": null,
+                                        "size": 46.37,
+                                        "width": 1000,
+                                        "height": 310,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/large_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "small": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280401/cms-prod/small_marble_race_image_2025_03_09_ei9v43_1ff40835a7.jpg",
+                                        "hash": "small_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                        "mime": "image/jpeg",
+                                        "name": "small_marble_race_image_2025_03_09_ei9v43.jpg",
+                                        "path": null,
+                                        "size": 16.94,
+                                        "width": 500,
+                                        "height": 155,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/small_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "medium": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280401/cms-prod/medium_marble_race_image_2025_03_09_ei9v43_1ff40835a7.jpg",
+                                        "hash": "medium_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                        "mime": "image/jpeg",
+                                        "name": "medium_marble_race_image_2025_03_09_ei9v43.jpg",
+                                        "path": null,
+                                        "size": 30.84,
+                                        "width": 750,
+                                        "height": 233,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/medium_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "thumbnail": {
+                                        "ext": ".jpg",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280400/cms-prod/thumbnail_marble_race_image_2025_03_09_ei9v43_1ff40835a7.jpg",
+                                        "hash": "thumbnail_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                        "mime": "image/jpeg",
+                                        "name": "thumbnail_marble_race_image_2025_03_09_ei9v43.jpg",
+                                        "path": null,
+                                        "size": 5.73,
+                                        "width": 245,
+                                        "height": 76,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "size": 79.82,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280400/cms-prod/marble_race_image_2025_03_09_ei9v43_1ff40835a7.jpg",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/marble_race_image_2025_03_09_ei9v43_1ff40835a7",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2025-04-10T10:20:01.574Z",
+                                "updatedAt": "2025-04-10T10:20:01.574Z"
+                            }
+                        }
+                    },
+                    "thumbnail_img": {
+                        "data": {
+                            "id": 106,
+                            "attributes": {
+                                "name": "marble_race_logo_eng_2025_02_sos27f.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 457,
+                                "height": 373,
+                                "formats": {
+                                    "thumbnail": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280466/cms-prod/thumbnail_marble_race_logo_eng_2025_02_sos27f_39f733d078.png",
+                                        "hash": "thumbnail_marble_race_logo_eng_2025_02_sos27f_39f733d078",
+                                        "mime": "image/png",
+                                        "name": "thumbnail_marble_race_logo_eng_2025_02_sos27f.png",
+                                        "path": null,
+                                        "size": 47.39,
+                                        "width": 191,
+                                        "height": 156,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_marble_race_logo_eng_2025_02_sos27f_39f733d078",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "marble_race_logo_eng_2025_02_sos27f_39f733d078",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 35.53,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1744280466/cms-prod/marble_race_logo_eng_2025_02_sos27f_39f733d078.png",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/marble_race_logo_eng_2025_02_sos27f_39f733d078",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2025-04-10T10:21:07.234Z",
+                                "updatedAt": "2025-04-10T10:21:07.234Z"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 2,
+            "attributes": {
+                "title": "Crazy Time Strategies",
+                "readDurationMin": null,
+                "createdAt": "2022-06-14T13:10:10.181Z",
+                "updatedAt": "2025-03-28T13:51:27.818Z",
+                "publishedAt": "2023-04-18T12:02:02.558Z",
+                "locale": "en",
+                "isHighlighted": null,
+                "slug": "crazy-time-strategy",
+                "seo": {
+                    "id": 3,
+                    "allowIndex": true,
+                    "allowFollow": true,
+                    "description": "Learn the odds, RTP & wheel to tailor your personal Crazy Time Strategy, or see our three strategies based on risk versus reward.",
+                    "metatitle": "Ultimate Crazy Time strategy ",
+                    "bg_img": {
+                        "data": {
+                            "id": 33,
+                            "attributes": {
+                                "name": "crazy timebackground.png",
+                                "alternativeText": "crazy timebackground.png",
+                                "caption": "crazy timebackground.png",
+                                "width": 1440,
+                                "height": 447,
+                                "formats": {
+                                    "large": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1675695369/cms-prod/large_crazy_timebackground_a81af0ede8.png",
+                                        "hash": "large_crazy_timebackground_a81af0ede8",
+                                        "mime": "image/png",
+                                        "name": "large_crazy timebackground.png",
+                                        "path": null,
+                                        "size": 826.83,
+                                        "width": 1000,
+                                        "height": 310,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/large_crazy_timebackground_a81af0ede8",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "small": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1675695371/cms-prod/small_crazy_timebackground_a81af0ede8.png",
+                                        "hash": "small_crazy_timebackground_a81af0ede8",
+                                        "mime": "image/png",
+                                        "name": "small_crazy timebackground.png",
+                                        "path": null,
+                                        "size": 206.27,
+                                        "width": 500,
+                                        "height": 155,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/small_crazy_timebackground_a81af0ede8",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "medium": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1675695370/cms-prod/medium_crazy_timebackground_a81af0ede8.png",
+                                        "hash": "medium_crazy_timebackground_a81af0ede8",
+                                        "mime": "image/png",
+                                        "name": "medium_crazy timebackground.png",
+                                        "path": null,
+                                        "size": 465.29,
+                                        "width": 750,
+                                        "height": 233,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/medium_crazy_timebackground_a81af0ede8",
+                                            "resource_type": "image"
+                                        }
+                                    },
+                                    "thumbnail": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1675695367/cms-prod/thumbnail_crazy_timebackground_a81af0ede8.png",
+                                        "hash": "thumbnail_crazy_timebackground_a81af0ede8",
+                                        "mime": "image/png",
+                                        "name": "thumbnail_crazy timebackground.png",
+                                        "path": null,
+                                        "size": 50.77,
+                                        "width": 245,
+                                        "height": 76,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_crazy_timebackground_a81af0ede8",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "crazy_timebackground_a81af0ede8",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 474.23,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1675695366/cms-prod/crazy_timebackground_a81af0ede8.png",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/crazy_timebackground_a81af0ede8",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2023-02-06T14:56:12.309Z",
+                                "updatedAt": "2024-05-22T10:04:17.517Z"
+                            }
+                        }
+                    },
+                    "thumbnail_img": {
+                        "data": {
+                            "id": 1,
+                            "attributes": {
+                                "name": "https://res.cloudinary.com/casinogrounds/image/upload/f_auto,q_auto,c_scale/CasinoScores/Crazy%20Time/crazy-time-logo.png",
+                                "alternativeText": "https://res.cloudinary.com/casinogrounds/image/upload/f_auto,q_auto,c_scale/CasinoScores/Crazy%20Time/crazy-time-logo.png",
+                                "caption": "https://res.cloudinary.com/casinogrounds/image/upload/f_auto,q_auto,c_scale/CasinoScores/Crazy%20Time/crazy-time-logo.png",
+                                "width": 457,
+                                "height": 373,
+                                "formats": {
+                                    "thumbnail": {
+                                        "ext": ".png",
+                                        "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1655212257/cms-prod/thumbnail_crazy_time_logo_e7a6119048.webp",
+                                        "hash": "thumbnail_crazy_time_logo_e7a6119048",
+                                        "mime": "image/webp",
+                                        "name": "thumbnail_https://res.cloudinary.com/casinogrounds/image/upload/f_auto,q_auto,c_scale/CasinoScores/Crazy%20Time/crazy-time-logo.png",
+                                        "path": null,
+                                        "size": 11.89,
+                                        "width": 191,
+                                        "height": 156,
+                                        "provider_metadata": {
+                                            "public_id": "cms-prod/thumbnail_crazy_time_logo_e7a6119048",
+                                            "resource_type": "image"
+                                        }
+                                    }
+                                },
+                                "hash": "crazy_time_logo_e7a6119048",
+                                "ext": ".png",
+                                "mime": "image/webp",
+                                "size": 40.42,
+                                "url": "https://res.cloudinary.com/dlkdffnou/image/upload/v1655212256/cms-prod/crazy_time_logo_e7a6119048.webp",
+                                "previewUrl": null,
+                                "provider": "cloudinary",
+                                "provider_metadata": {
+                                    "public_id": "cms-prod/crazy_time_logo_e7a6119048",
+                                    "resource_type": "image"
+                                },
+                                "createdAt": "2022-06-14T13:10:57.375Z",
+                                "updatedAt": "2022-06-14T13:10:57.375Z"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "start": 0,
+            "limit": 3,
+            "total": 34
+        }
+    }
+}

@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CasinoGame {
+  id              String       @id @default(uuid())
+  name            String
+  apiName         String // e.g. 'sweetbonanzacandyland'
+  tableId         String?
+  logo            String? // URL to logo image
+  rtp             Float? // Return to Player percentage
+  maxWin          Float? // Maximum win multiplier or amount
+  minStake        Float?
+  maxStake        Float?
+  releaseYear     Int?
+  provider        String?
+  specialFeatures String? // e.g. 'Cash Hunt, Coin Flip, Pachinko, Crazy Time'
+  description     String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  results         GameResult[]
+}
+
+model GameResult {
+  id           String     @id @default(uuid())
+  externalId   String // id from the API
+  startedAt    DateTime
+  settledAt    DateTime
+  status       String
+  result       Json
+  casinoGameId String
+  casinoGame   CasinoGame @relation(fields: [casinoGameId], references: [id])
+  createdAt    DateTime   @default(now())
+}

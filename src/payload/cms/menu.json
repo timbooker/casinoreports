@@ -1,0 +1,1132 @@
+{
+    "data": {
+        "id": 1,
+        "attributes": {
+            "items": {
+                "csLogo": "/",
+                "allGames": {
+                    "href": "/games",
+                    "title": "All Games"
+                },
+                "footerItems": [
+                    {
+                        "href": "/games/",
+                        "title": "Games"
+                    },
+                    {
+                        "href": "/bonuses/",
+                        "title": "Bonuses"
+                    },
+                    {
+                        "href": "/contact-us/",
+                        "title": "Contact Us"
+                    },
+                    {
+                        "href": "/cookie-policy/",
+                        "title": "Cookie Policy"
+                    },
+                    {
+                        "href": "/privacy-policy/",
+                        "title": "Privacy Policy"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "region_selector_clicked",
+                            "eventLabel": "region_selector_dropdown_open",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "#",
+                        "icon": "https://res.cloudinary.com/dlkdffnou/image/upload/v1661424213/cms-giosue/Rest_of_the_world_ROW_3x.png",
+                        "classes": "d-block d-lg-block",
+                        "subItems": [
+                            {
+                                "gtag": {
+                                    "eventName": "latin_america_region_selected",
+                                    "eventLabel": "latin_america_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Español – América Latina",
+                                "locale": "es-419",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "italy_region_selected",
+                                    "eventLabel": "italy_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Italiano",
+                                "locale": "it",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "brazil_region_selected",
+                                    "eventLabel": "brazil_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Português – Brasil",
+                                "locale": "pt-br",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "spain_region_selected",
+                                    "eventLabel": "spain_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Español",
+                                "locale": "es",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "turkish_region_selected",
+                                    "eventLabel": "turkish_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Turkish",
+                                "locale": "tr",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "rest_of_the_world_region_selected",
+                                    "eventLabel": "rest_of_the_world_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "English",
+                                "locale": "en",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            }
+                        ],
+                        "isDropdown": true
+                    }
+                ],
+                "headerItems": [
+                    {
+                        "gtag": {
+                            "eventName": "link_to_homepage_clicked",
+                            "eventLabel": "homepage",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/",
+                        "title": "Home",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop games_dropdown_open",
+                            "eventLabel": "games_dropdown_open",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "title": "Games",
+                        "classes": "d-none d-lg-block",
+                        "subItems": [
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - CRAZY TIME",
+                                    "eventLabel": "/crazy-time",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/crazy-time",
+                                "title": "CRAZY TIME",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - TREASURE ISLAND",
+                                    "eventLabel": "/treasure-island",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/treasure-island",
+                                "title": "TREASURE ISLAND",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - FIREBALL ROULETTE",
+                                    "eventLabel": "/fireball-roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/fireball-roulette",
+                                "title": "FIREBALL ROULETTE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - MARBLE RACE",
+                                    "eventLabel": "/marble-race",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/marble-race",
+                                "title": "MARBLE RACE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - MONOPOLY BIG BALLER",
+                                    "eventLabel": "/monopoly-big-baller",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/monopoly-big-baller",
+                                "title": "MONOPOLY BIG BALLER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - LIGHTNING STORM",
+                                    "eventLabel": "/lightning-storm",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/lightning-storm",
+                                "title": "LIGHTNING STORM",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - MONOPOLY LIVE",
+                                    "eventLabel": "/monopoly-live",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/monopoly-live",
+                                "title": "MONOPOLY LIVE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - FUNKY TIME",
+                                    "eventLabel": "/funky-time",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/funky-time",
+                                "title": "FUNKY TIME",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - SWEET BONANZA CANDYLAND",
+                                    "eventLabel": "sweet_bonanza_candyland",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/sweet-bonanza-candyland",
+                                "title": "SWEET BONANZA CANDYLAND",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - CRAZY BALLS",
+                                    "eventLabel": "/crazy-balls",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/crazy-balls",
+                                "title": "CRAZY BALLS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - ADVENTURES BEYOND WONDERLAND",
+                                    "eventLabel": "/adventures-beyond-wonderland",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/adventures-beyond-wonderland",
+                                "title": "ADVENTURES BEYOND WONDERLAND",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - MEGA WHEEL",
+                                    "eventLabel": "/mega-wheel",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/mega-wheel",
+                                "title": "MEGA WHEEL",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - RED DOOR ROULETTE",
+                                    "eventLabel": "red_door_roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/red-door-roulette",
+                                "title": "RED DOOR ROULETTE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop game - SUPER SIC BO",
+                                    "eventLabel": "/super-sic-bo",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/super-sic-bo",
+                                "title": "SUPER SIC BO",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop see_all_games_link_in_dropdown_desktop",
+                                    "eventLabel": "all_games",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/games",
+                                "title": "SEE ALL GAMES",
+                                "classes": "text-primary text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - WAR LIVE",
+                                    "eventLabel": "war_live",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/war-live",
+                                "title": "WAR LIVE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - EXTRA CHILLI EPIC SPINS",
+                                    "eventLabel": "extra_chilli_epic_spins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/extra-chilli-epic-spins",
+                                "title": "EXTRA CHILLI EPIC SPINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - VIDEO POKER",
+                                    "eventLabel": "video_[pker]",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/video-poker",
+                                "title": "VIDEO POKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - IMPERIAL QUEST",
+                                    "eventLabel": "imperial_quest",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/imperial-quest",
+                                "title": "IMPERIAL QUEST",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - MEGA BALL",
+                                    "eventLabel": "mega_ball",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/mega-ball",
+                                "title": "MEGA BALL",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - FAN TAN LIVE",
+                                    "eventLabel": "fan_tan_live",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/fan-tan-live",
+                                "title": "FAN TAN LIVE",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - DEAD OR ALIVE SALOON",
+                                    "eventLabel": "dead_or_alive_saloon",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/dead-or-alive-saloon",
+                                "title": "DEAD OR ALIVE SALOON",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - LIVE CRAPS",
+                                    "eventLabel": "live_craps",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/live-craps",
+                                "title": "LIVE CRAPS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop - FREE BET BLACKJACK",
+                                    "eventLabel": "free_bet_blackjack",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/free-bet-blackjack",
+                                "title": "FREE BET BLACKJACK",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Main nav desktop see_all_games_link_in_dropdown_desktop",
+                                    "eventLabel": "all_games",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/games",
+                                "title": "SEE ALL GAMES",
+                                "classes": "text-primary text-lg-left",
+                                "isDropdown": true,
+                                "isFirstColumn": false
+                            }
+                        ],
+                        "isDropdown": true,
+                        "isSplitDropdown": true,
+                        "dropdownSubheaders": {
+                            "firstSubheader": "Tracked Games",
+                            "secondSubheader": "Live Streams"
+                        }
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "bonuses_desktop_clicked",
+                            "eventLabel": "bonuses",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/bonuses",
+                        "title": "Bonuses",
+                        "classes": "d-none d-lg-block",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - CRAZY TIME",
+                            "eventLabel": "/crazy-time",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/crazy-time",
+                        "title": "CRAZY TIME",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - TREASURE ISLAND",
+                            "eventLabel": "/treasure-island",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/treasure-island",
+                        "title": "TREASURE ISLAND",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "hasNewLabel": true,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - FIREBALL ROULETTE",
+                            "eventLabel": "/fireball-roulette",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/fireball-roulette",
+                        "title": "FIREBALL ROULETTE",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - MONOPOLY BIG BALLER",
+                            "eventLabel": "/monopoly-big-baller",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/monopoly-big-baller",
+                        "title": "MONOPOLY BIG BALLER",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - LIGHTNING STORM",
+                            "eventLabel": "/lightning-storm",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/lightning-storm",
+                        "title": "LIGHTNING STORM",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "hasNewLabel": false,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - MONOPOLY LIVE",
+                            "eventLabel": "/monopoly-live",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/monopoly-live",
+                        "title": "MONOPOLY LIVE",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "hasNewLabel": false,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop game - FUNKY TIME",
+                            "eventLabel": "/funky-time",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/funky-time",
+                        "title": "FUNKY TIME",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "hasNewLabel": false,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "Main nav desktop - SWEET BONANZA CANDYLAND",
+                            "eventLabel": "/sweet-bonanza-candyland",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/sweet-bonanza-candyland",
+                        "title": "SWEET BONANZA CANDYLAND",
+                        "classes": "d-block d-lg-none",
+                        "isDropdown": true,
+                        "hasNewLabel": false,
+                        "navLinkClasses": "text-center text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "see_all_games_mobile_clicked",
+                            "eventLabel": "all_games",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/games",
+                        "title": "SEE ALL GAMES",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center text-primary text-bold-mobile"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "biggest_wins_dropdown_clicked",
+                            "eventLabel": "biggest_wins_gallery_nav",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "title": "Biggest Wins",
+                        "subItems": [
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_crazy_time_clicked",
+                                    "eventLabel": "/crazy-time/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/crazy-time/biggest-wins",
+                                "title": "CRAZY TIME BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_treasure_island_clicked",
+                                    "eventLabel": "/treasure-island/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/treasure-island/biggest-wins",
+                                "title": "TREASURE ISLAND BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_fireball_roulette_clicked",
+                                    "eventLabel": "/fireball-roulette/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/fireball-roulette/biggest-wins",
+                                "title": "FIREBALL ROULETTE BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": false
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_adventures_beyond_wonderland_clicked",
+                                    "eventLabel": "/adventures-beyond-wonderland/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/adventures-beyond-wonderland/biggest-wins",
+                                "title": "ABW BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_lightning_storm_clicked",
+                                    "eventLabel": "/lightning-storm/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/lightning-storm/biggest-wins",
+                                "title": "LIGHTNING STORM BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_sweet_bonanza_candyland_clicked",
+                                    "eventLabel": "/sweet-bonanza-candyland/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/sweet-bonanza-candyland/biggest-wins",
+                                "title": "SWEET BONANZA CANDYLAND BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_red_door_roulette_clicked",
+                                    "eventLabel": "/red-door-roulette/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/red-door-roulette/biggest-wins",
+                                "title": "RED DOOR ROULETTE BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_monopoly_live_clicked",
+                                    "eventLabel": "/monopoly-live/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/monopoly-live/biggest-wins",
+                                "title": "MONOPOLY LIVE BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_funky_time_clicked",
+                                    "eventLabel": "/funky-time/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/funky-time/biggest-wins",
+                                "title": "FUNKY TIME BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_monopoly_big_baller_clicked",
+                                    "eventLabel": "/monopoly-big-baller/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/monopoly-big-baller/biggest-wins",
+                                "title": "MONOPOLY BIG BALLER BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_cash_or_crash_clicked",
+                                    "eventLabel": "/cash-or-crash-live/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/cash-or-crash-live/biggest-wins",
+                                "title": "CASH OR CRASH LIVE BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "biggest_wins_lightning_baccarat_clicked",
+                                    "eventLabel": "/lightning-baccarat/biggest-wins",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/lightning-baccarat/biggest-wins",
+                                "title": "LIGHTNING BACCARAT BIGGEST WINS",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            }
+                        ],
+                        "isDropdown": true
+                    },
+                    {
+                        "title": "Bet Trackers",
+                        "classes": "align-menu-right",
+                        "subItems": [
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Crazy Time",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/crazy-time/tracker",
+                                "title": "CRAZY TIME BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Adventures Beyond Wonderland",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/adventures-beyond-wonderland/tracker",
+                                "title": "ABW BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true,
+                                "hasNewLabel": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Fireball Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/fireball-roulette/tracker",
+                                "title": "FIREBALL ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Lightning Storm",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/lightning-storm/tracker",
+                                "title": "LIGHTNING STORM BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Auto Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/auto-roulette/tracker",
+                                "title": "AUTO ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Funky Time",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/funky-time/tracker",
+                                "title": "FUNKY TIME BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Monopoly Live",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/monopoly-live/tracker",
+                                "title": "MONOPOLY LIVE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Red Door Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/red-door-roulette/tracker",
+                                "title": "RED DOOR ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Sweet Bonanza Candyland",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/sweet-bonanza-candyland/tracker",
+                                "title": "SWEET BONANZA CANDYLAND BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Mega Wheel",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/mega-wheel/tracker",
+                                "title": "MEGA WHEEL BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "XXXtreme Lightnning Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/xxxtreme-lightning-roulette/tracker",
+                                "title": "XXXTREME LIGHTNING ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Lightning Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/lightning-roulette/tracker",
+                                "title": "LIGHTNING ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Gold Vault Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/gold-vault-roulette/tracker",
+                                "title": "GOLD VAULT ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "Menu Nav Bet Tracker Clicked",
+                                    "eventLabel": "Mega Roulette",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/mega-roulette/tracker",
+                                "title": "MEGA ROULETTE BET TRACKER",
+                                "classes": "text-lg-left",
+                                "isDropdown": true
+                            }
+                        ],
+                        "isDropdown": true,
+                        "dropdownDirection": "start"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "bonuses_mobile_clicked",
+                            "eventLabel": "bonuses",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/bonuses",
+                        "title": "Bonuses",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "link_to_articles_clicked",
+                            "eventLabel": "articles",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/blog",
+                        "title": "Articles",
+                        "classes": "d-block",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "cookie_policy_link_clicked",
+                            "eventLabel": "cookie_policy",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/cookie-policy",
+                        "title": "Cookie Policy",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "privacy_policy_link_clicked",
+                            "eventLabel": "privacy_policy",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/privacy-policy",
+                        "title": "Privacy Policy",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "contact_us_link_clicked",
+                            "eventLabel": "contact_us",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "href": "/contact-us",
+                        "title": "Contact",
+                        "classes": "d-block d-lg-none",
+                        "navLinkClasses": "text-center"
+                    },
+                    {
+                        "gtag": {
+                            "eventName": "region_selector_clicked",
+                            "eventLabel": "region_selector_dropdown_open",
+                            "eventAction": "click",
+                            "eventCategory": "navigation"
+                        },
+                        "icon": "https://res.cloudinary.com/dlkdffnou/image/upload/v1661424213/cms-giosue/Rest_of_the_world_ROW_3x.png",
+                        "classes": "d-block d-lg-none mb-5",
+                        "subItems": [
+                            {
+                                "gtag": {
+                                    "eventName": "latin_america_region_selected",
+                                    "eventLabel": "latin_america_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Español – América Latina",
+                                "locale": "es-419",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "italy_region_selected",
+                                    "eventLabel": "italy_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Italiano",
+                                "locale": "it",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "brazil_region_selected",
+                                    "eventLabel": "brazil_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Português – Brasil",
+                                "locale": "pt-br",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "spain_region_selected",
+                                    "eventLabel": "spain_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Español",
+                                "locale": "es",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "turkish_region_selected",
+                                    "eventLabel": "turkish_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "Turkish",
+                                "locale": "tr",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            },
+                            {
+                                "gtag": {
+                                    "eventName": "rest_of_the_world_region_selected",
+                                    "eventLabel": "rest_of_the_world_region_selected",
+                                    "eventAction": "click",
+                                    "eventCategory": "navigation"
+                                },
+                                "href": "/",
+                                "title": "English",
+                                "locale": "en",
+                                "classes": "text-lg-left",
+                                "isActive": false,
+                                "isDropdown": true
+                            }
+                        ],
+                        "isDropdown": true
+                    }
+                ]
+            },
+            "createdAt": "2022-08-03T11:08:32.322Z",
+            "updatedAt": "2025-07-02T08:55:39.425Z",
+            "publishedAt": "2022-08-03T11:11:03.148Z",
+            "locale": "en"
+        }
+    },
+    "meta": {}
+}
