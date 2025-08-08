@@ -137,7 +137,4 @@ app.use("/api", routes);
 app.listen(PORT, async () => {
     console.log(`Proxy API server running on port ${PORT}`);
     console.log(`Swagger documentation available at http://localhost:${PORT}/api-docs`);
-
-    // Seed the database on startup
-    await seedDatabase();
 });
