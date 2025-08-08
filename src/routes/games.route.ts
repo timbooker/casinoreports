@@ -97,4 +97,68 @@ GamesRouter.get("/games/:id", async (req: Request, res: Response) => {
     }
 });
 
+/**
+ * @swagger
+ * /api/games/name/{name}:
+ *   get:
+ *     summary: Get a single casino game by name or api_name
+ *     description: Retrieves a specific casino game by its name or api_name
+ *     tags: [Casino Games]
+ *     parameters:
+ *       - in: path
+ *         name: name
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The casino game name or api_name
+ *     responses:
+ *       200:
+ *         description: Casino game retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/CasinoGame'
+ *       404:
+ *         description: Casino game not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *       500:
+ *         description: Failed to fetch casino game
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ */
+GamesRouter.get("/games/name/:name", async (req: Request, res: Response) => {
+    try {
+        const game = await prisma.casinoGame.findFirst({
+            where: {
+                OR: [{ name: req.params.name }, { api_name: req.params.name }]
+            }
+        });
+
+        if (!game) {
+            res.status(404).json({
+                error: "Casino game with name or api_name not found.",
+                name: req.params.name
+            });
+
+            return;
+        }
+
+        res.json(game);
+    } catch (error) {
+        console.error("Error fetching casino game:", error);
+        res.status(500).json({ error: "Failed to fetch casino game." });
+    }
+});
+
 export default GamesRouter;
