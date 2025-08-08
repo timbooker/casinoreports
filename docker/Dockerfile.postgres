@@ -6,6 +6,6 @@ ENV POSTGRES_PASSWORD=casino_password
 
 COPY ./init-scripts/ /docker-entrypoint-initdb.d/
 
-EXPOSE 54321
+EXPOSE 5432
 
 CMD ["postgres"]
