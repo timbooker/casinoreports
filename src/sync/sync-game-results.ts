@@ -39,7 +39,7 @@ const GAME_CONFIGS = [
 async function syncGameResults() {
     for (const game of GAME_CONFIGS) {
         try {
-            const casinoGame = await prisma.casinoGame.findFirst({ where: { apiName: game.apiName } });
+            const casinoGame = await prisma.casinoGame.findFirst({ where: { api_name: game.apiName } });
 
             if (!casinoGame) {
                 console.warn(`CasinoGame not found for apiName: ${game.apiName}`);

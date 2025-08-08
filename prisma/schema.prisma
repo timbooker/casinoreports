@@ -5,23 +5,24 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-}
+} 
 
 model CasinoGame {
   id              String       @id @default(uuid())
   name            String // e.g. 'Live Craps'
-  description     String?
+  description     String? // e.g. 'Live Craps is a game of chance where you bet on the outcome of a dice roll.'
   api_name        String // e.g. 'sweetbonanzacandyland'
   logo            String? // URL to logo image
   category        String // 'LIVE STREAMS' | 'TRACKED GAME SHOWS'
   rtp             String? // Return to Player percentage
   max_win         Float? // Maximum win multiplier or amount
   min_stake       Float?
-  max_take        Float?
+  max_take        Float? 
   release_date    String?
   provider        String?
   features        Json? @default("[]") // Array of strings e.g. ['Cash Hunt', 'Coin Flip', 'Pachinko', 'Crazy Time']
   is_new          Boolean      @default(false)
+  fetch_results_url String? // URL to fetch results for this game
   created_at      DateTime     @default(now())
   updated_at      DateTime     @updatedAt
   results         GameResult[]

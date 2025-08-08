@@ -9,6 +9,7 @@
         "is_new": false,
         "release_date": null,
         "rtp": "95.41%",
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/crazytime",
         "features": ["Cash Hunt Bonus", "Pachinko Bonus", "Coin Flip Bonus", "Crazy Time Bonus"]
     },
     {
@@ -21,7 +22,8 @@
         "is_new": true,
         "release_date": "Expected August 2025",
         "rtp": "Not officially confirmed",
-        "features": ["Lil' Blues Bonus", "Big Oranges Bonus", "Huge Reds Bonus"]
+        "features": ["Lil' Blues Bonus", "Big Oranges Bonus", "Huge Reds Bonus"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/icefishing"
     },
     {
         "name": "Monopoly Live",
@@ -33,7 +35,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Chance Card Feature", "2 ROLLS Bonus Game", "4 ROLLS Bonus Game"]
+        "features": ["Chance Card Feature", "2 ROLLS Bonus Game", "4 ROLLS Bonus Game"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/monopolylive"
     },
     {
         "name": "Lightning Storm",
@@ -51,7 +54,8 @@
             "Battery Charger Bonus",
             "Fireball Bonus",
             "Lightning Storm Bonus"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/lightningstorm"
     },
     {
         "name": "Adventures Beyond Wonderland",
@@ -63,7 +67,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Four Bonus Rounds", "Two Mystery Symbols", "Live Dealers in Costume"]
+        "features": ["Four Bonus Rounds", "Two Mystery Symbols", "Live Dealers in Costume"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/adventuresbeyondwonderland"
     },
     {
         "name": "Monopoly Big Baller",
@@ -75,7 +80,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "96.10%",
-        "features": ["Chance / Free Space Cards", "3 and 5 Rolls Bonus Cards", "Three Multiplier Types"]
+        "features": ["Chance / Free Space Cards", "3 and 5 Rolls Bonus Cards", "Three Multiplier Types"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/monopolybigballer"
     },
     {
         "name": "Sweet Bonanza Candyland",
@@ -87,7 +93,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "96.95%",
-        "features": ["Sugar Bomb", "Bubble Surprise", "Candy Drop Bonus", "Sweet Spins Bonus"]
+        "features": ["Sugar Bomb", "Bubble Surprise", "Candy Drop Bonus", "Sweet Spins Bonus"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/sweetbonanzacandyland"
     },
     {
         "name": "Fortune Roulette",
@@ -99,7 +106,8 @@
         "is_new": true,
         "release_date": null,
         "rtp": null,
-        "features": ["Fortune Multipliers", "Chest Feature", "Bonus Game"]
+        "features": ["Fortune Multipliers", "Chest Feature", "Bonus Game"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/fortuneroulette"
     },
     {
         "name": "Lightning Bac Bo",
@@ -115,7 +123,8 @@
             "Guaranteed Lightning Multipliers (2x-8x)",
             "Dice-based gameplay",
             "Tie bet with high potential payout"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/lightningbacbo"
     },
     {
         "name": "Treasure Island",
@@ -127,7 +136,8 @@
         "is_new": true,
         "release_date": null,
         "rtp": null,
-        "features": null
+        "features": null,
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/treasureisland"
     },
     {
         "name": "Super Color Game",
@@ -143,7 +153,8 @@
             "Three six-sided colored dice",
             "Single, Double, and Triple bets",
             "Up to 18 multipliers applied per round"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/supercolorgame"
     },
     {
         "name": "Dream Catcher",
@@ -155,7 +166,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "96.58%",
-        "features": ["Large vertical money wheel", "2x and 7x win multiplier segments", "Live host interaction"]
+        "features": ["Large vertical money wheel", "2x and 7x win multiplier segments", "Live host interaction"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/dreamcatcher"
     },
     {
         "name": "Marble Race",
@@ -167,7 +179,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "95.83% (1st Place), 93.33% (1st & 2nd)",
-        "features": ["Six colored marbles race", "Obstacle-filled track", "Bet on 1st place or 1st & 2nd place"]
+        "features": ["Six colored marbles race", "Obstacle-filled track", "Bet on 1st place or 1st & 2nd place"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/marblerace"
     },
     {
         "name": "Speed Baccarat A",
@@ -179,7 +192,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "Up to 98.94%",
-        "features": ["Fast-paced rounds (under 30s)", "High RTP", "Side bets like Perfect Pairs"]
+        "features": ["Fast-paced rounds (under 30s)", "High RTP", "Side bets like Perfect Pairs"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/speedbaccarat"
     },
     {
         "name": "Super Andar Bahar",
@@ -191,7 +205,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Based on traditional Indian card game", "Side bets on number of cards", "Random multipliers"]
+        "features": ["Based on traditional Indian card game", "Side bets on number of cards", "Random multipliers"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/superandarbahar"
     },
     {
         "name": "Crazy Balls",
@@ -203,7 +218,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "95.54% - 96.49%",
-        "features": ["Bingo-style gameplay", "Four bonus rounds from Crazy Time", "Three types of multipliers"]
+        "features": ["Bingo-style gameplay", "Four bonus rounds from Crazy Time", "Three types of multipliers"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/crazyballs"
     },
     {
         "name": "Bac Bo",
@@ -219,7 +235,8 @@
             "Combination of Baccarat and Sic Bo",
             "Uses dice instead of cards",
             "Tie bet with high potential payout"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/bacbo"
     },
     {
         "name": "Lightning Dice",
@@ -235,7 +252,8 @@
             "Three dice rolled in a 'Lightning Tower'",
             "Random Lightning Multipliers (up to 1,000x)",
             "Interactive Interface"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/lightningdice"
     },
     {
         "name": "Auto Roulette",
@@ -247,7 +265,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "97.30%",
-        "features": ["Automated wheel, no dealer", "Fast-paced rounds", "Available 24/7"]
+        "features": ["Automated wheel, no dealer", "Fast-paced rounds", "Available 24/7"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/autoroulette"
     },
     {
         "name": "Fireball Roulette",
@@ -259,7 +278,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "97.00% (Straight Up), 97.30% (Other)",
-        "features": ["Fireball Bonus Round", "Fireball Chaser Bet", "Multipliers up to 2,500x in bonus"]
+        "features": ["Fireball Bonus Round", "Fireball Chaser Bet", "Multipliers up to 2,500x in bonus"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/fireballroulette"
     },
     {
         "name": "Super Sic Bo",
@@ -271,7 +291,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": "Up to 97.22%",
-        "features": ["Live dice rolls", "Random multipliers up to 999x", "Wide range of betting options"]
+        "features": ["Live dice rolls", "Random multipliers up to 999x", "Wide range of betting options"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/supersicbo"
     },
     {
         "name": "Funky Time",
@@ -283,7 +304,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["DigiWheel", "BAR Bonus", "Stayin' Alive Bonus", "Disco Bonus", "VIP Disco Bonus"]
+        "features": ["DigiWheel", "BAR Bonus", "Stayin' Alive Bonus", "Disco Bonus", "VIP Disco Bonus"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/funkytime"
     },
     {
         "name": "Mega Roulette",
@@ -295,7 +317,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Up to five random multipliers per spin", "Multipliers from 50x to 500x", "Live dealer format"]
+        "features": ["Up to five random multipliers per spin", "Multipliers from 50x to 500x", "Live dealer format"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/megaroulette"
     },
     {
         "name": "Mega Wheel",
@@ -307,7 +330,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["54-segment prize wheel", "Random multiplier up to 500x on every spin", "Live host"]
+        "features": ["54-segment prize wheel", "Random multiplier up to 500x on every spin", "Live host"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/megawheel"
     },
     {
         "name": "Lightning Roulette",
@@ -319,7 +343,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Lucky Numbers with multipliers", "Lucky Payouts from 50x to 500x", "Straight up bet pays 30:1"]
+        "features": ["Lucky Numbers with multipliers", "Lucky Payouts from 50x to 500x", "Straight up bet pays 30:1"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/lightningroulette"
     },
     {
         "name": "XXXTreme Lightning Roulette",
@@ -331,7 +356,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["Multipliers up to 2,000x", "Chain Lightning feature", "One to five lightning numbers per round"]
+        "features": ["Multipliers up to 2,000x", "Chain Lightning feature", "One to five lightning numbers per round"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/xxxtremelightningroulette"
     },
     {
         "name": "Red Door Roulette",
@@ -343,7 +369,8 @@
         "is_new": false,
         "release_date": "November 8th, 2023",
         "rtp": "97.30%",
-        "features": ["3-15 Bonus Numbers per round", "Crazy Time Bonus game", "Random multipliers up to 20x"]
+        "features": ["3-15 Bonus Numbers per round", "Crazy Time Bonus game", "Random multipliers up to 20x"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/reddoorroulette"
     },
     {
         "name": "Gold Vault Roulette",
@@ -355,7 +382,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": null
+        "features": null,
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/goldvaultroulette"
     },
     {
         "name": "Crazy Coin Flip",
@@ -367,7 +395,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": ["RNG Slot qualifying round", "Live Coin Flip bonus round", "XXXTreme spin modes"]
+        "features": ["RNG Slot qualifying round", "Live Coin Flip bonus round", "XXXTreme spin modes"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/crazycoinflip"
     },
     {
         "name": "Immersive Roulette",
@@ -379,7 +408,8 @@
         "is_new": false,
         "release_date": "2013",
         "rtp": "97.3%",
-        "features": ["Multi-camera visuals", "Slow motion replay feature", "200 frames per second HD video"]
+        "features": ["Multi-camera visuals", "Slow motion replay feature", "200 frames per second HD video"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/immersiveroulette"
     },
     {
         "name": "Lightning Baccarat",
@@ -391,7 +421,8 @@
         "is_new": false,
         "release_date": "2020",
         "rtp": "98.76% (Player)",
-        "features": ["Lightning Round with multipliers", "Multipliers up to 512x", "20% Lightning Fee"]
+        "features": ["Lightning Round with multipliers", "Multipliers up to 512x", "20% Lightning Fee"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/lightningbaccarat"
     },
     {
         "name": "Cash or Crash Live",
@@ -407,7 +438,8 @@
             "20-step paytable ladder",
             "Green, Red, and Gold ball mechanics",
             "Strategic choices: continue, take half, or take all"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/cashorcrashlive"
     },
     {
         "name": "Fan Tan Live",
@@ -423,7 +455,8 @@
             "Based on ancient Asian game",
             "Standard and Advanced betting modes",
             "Multiple bet types (Nim, Kwok, Ssh)"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/fantanlive"
     },
     {
         "name": "War Live",
@@ -435,7 +468,8 @@
         "is_new": true,
         "release_date": null,
         "rtp": "96.27% - 96.56%",
-        "features": ["Simple 'higher card wins' rule", "Go To War on a Tie", "Side bet on a Tie result"]
+        "features": ["Simple 'higher card wins' rule", "Go To War on a Tie", "Side bet on a Tie result"],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/warlive"
     },
     {
         "name": "Mega Ball",
@@ -451,7 +485,8 @@
             "Bingo/Lottery hybrid",
             "Mega Ball bonus round with 5x-100x multiplier",
             "Purchase up to 200 cards per round"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/megaball"
     },
     {
         "name": "Free Bet Blackjack",
@@ -468,7 +503,8 @@
             "Free Split bets on pairs (except 10s)",
             "Four optional side bets",
             "Unlimited seating"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/freebetblackjack"
     },
     {
         "name": "Extra Chilli Epic Spins",
@@ -484,7 +520,8 @@
             "Megaways slot mechanic",
             "Piñata feature with multipliers or bonus triggers",
             "Gamble Wheels to win extra free spins"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/extrachilliepicspins"
     },
     {
         "name": "Video Poker",
@@ -500,7 +537,8 @@
             "Play up to 100 hands at once",
             "Multiple variations (Jacks or Better, Deuces Wild, etc.)",
             "First-Person mode available"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/videopoker"
     },
     {
         "name": "Imperial Quest",
@@ -516,7 +554,8 @@
             "Asian-themed money wheel",
             "2x and 7x win multiplier segments",
             "Potential combined multiplier up to 20,000x"
-        ]
+        ],
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/imperialquest"
     },
     {
         "name": "Dead or Alive Saloon",
@@ -528,7 +567,8 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": null
+        "features": null,
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/deadoralive"
     },
     {
         "name": "Live Craps",
@@ -540,6 +580,7 @@
         "is_new": false,
         "release_date": null,
         "rtp": null,
-        "features": null
+        "features": null,
+        "fetch_url": "https://api.casinoscores.com/svc-evolution-game-events/api/livecraps"
     }
 ]
