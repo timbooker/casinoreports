@@ -5,6 +5,8 @@ import { AxiosResponse } from "axios";
 import { CasinoGame } from "@prisma/client";
 
 export async function syncGameResults() {
+    console.log("Syncing game results...");
+
     const games = await prisma.casinoGame.findMany();
 
     await Promise.allSettled(
@@ -25,6 +27,8 @@ export async function syncGameResults() {
             );
         })
     );
+
+    console.log("Game results synced");
 }
 
 async function syncGameResult(result: GameResult, game: CasinoGame) {
@@ -42,9 +46,9 @@ async function syncGameResult(result: GameResult, game: CasinoGame) {
                     settled_at: new Date(result.data.settledAt),
                     status: result.data.status,
                     result: JSON.parse(JSON.stringify(result.data.result)),
-                    total_winners: result.totalWinners,
-                    total_amount: result.totalAmount,
-                    winners: JSON.parse(JSON.stringify(result.winners)),
+                    total_winners: result.totalWinners ?? null,
+                    total_amount: result.totalAmount ?? null,
+                    winners: result.winners ? JSON.parse(JSON.stringify(result.winners)) : null,
                     data_raw: JSON.parse(JSON.stringify(result.data))
                 }
             });
@@ -58,9 +62,9 @@ async function syncGameResult(result: GameResult, game: CasinoGame) {
                     status: result.data.status,
                     settled_at: new Date(result.data.settledAt),
                     started_at: new Date(result.data.startedAt),
-                    total_winners: result.totalWinners,
-                    total_amount: result.totalAmount,
-                    winners: JSON.parse(JSON.stringify(result.winners)),
+                    total_winners: result.totalWinners ?? null,
+                    total_amount: result.totalAmount ?? null,
+                    winners: result.winners ? JSON.parse(JSON.stringify(result.winners)) : null,
                     data_raw: JSON.parse(JSON.stringify(result.data))
                 }
             });

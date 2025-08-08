@@ -1,9 +1,9 @@
 export interface GameResult {
     id: string;
     data: GameData;
-    totalWinners: number;
-    totalAmount: number;
-    winners: Winner[];
+    totalWinners?: number;
+    totalAmount?: number;
+    winners?: Winner[];
 }
 
 export interface GameData {

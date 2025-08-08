@@ -36,9 +36,9 @@ model GameResult {
   settled_at     DateTime
   status         String
   result         Json
-  total_winners  Int
-  total_amount   Float
-  winners        Json
+  total_winners  Int?
+  total_amount   Float?
+  winners        Json?
   data_raw       Json
   casino_game_id String
   casino_game    CasinoGame @relation(fields: [casino_game_id], references: [id])
