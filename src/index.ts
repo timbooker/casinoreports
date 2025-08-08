@@ -3,7 +3,6 @@ import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import routes from "./routes";
 import dotenv from "dotenv";
-import { seedDatabase } from "./seed-database";
 import "./sync/main";
 
 dotenv.config();
