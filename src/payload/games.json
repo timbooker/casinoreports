@@ -1,0 +1,248 @@
+[
+    {
+        "name": "Crazy Time",
+        "apiName": "crazy-time",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_60,c_scale,c_crop,h_153,w_190/CasinoScores/crazy-time-thumbnail.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Ice Fishing",
+        "apiName": "ice-fishing",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/ice-fishing/logo-ice-fishing.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Monopoly Live",
+        "apiName": "monopoly-live",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_200,f_auto,q_auto,c_scale/CasinoScores/Monopoly%20Live/monopoly-live-thumbnail-2.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Lightning Storm",
+        "apiName": "lightning-storm",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1721032732/lightning-storm/lightning-storm-logo-min.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Adventures Beyond Wonderland",
+        "apiName": "adventures-beyond-wonderland",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Adventures%20Beyond%20Wonderland/adventures-beyond-wonderland-logo.png",
+        "provider": "playtech"
+    },
+    {
+        "name": "Monopoly Big Baller",
+        "apiName": "monopoly-big-baller",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/MonopolyBigBaller/monopoly-big-baller-logo-thumbnail.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Sweet Bonanza Candyland",
+        "apiName": "sweet-bonanza-candyland",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Sweet%20Bonanza%20Candyland/sweet_bonanza_candyland_logo-min-compressed.png",
+        "provider": "pragmatic-play"
+    },
+    {
+        "name": "Fortune Roulette",
+        "apiName": "fortune-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/fortune-roulette/fortune-roulette-logo-min.png",
+        "provider": "pragmatic-play"
+    },
+    {
+        "name": "Lightning Bac Bo",
+        "apiName": "lightning-bac-bo",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,c_scale,w_auto/lightning-bac-bo/lightning-bac-bo-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Treasure Island",
+        "apiName": "treasure-island",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,c_scale/Treasure%20Island/treasure-island-logo.png",
+        "provider": "pragmatic-play"
+    },
+    {
+        "name": "Super Color Game",
+        "apiName": "super-color-game",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/super-color-game/super-color-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Dream Catcher",
+        "apiName": "dream-catcher",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/dreamcatcher.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Marble Race",
+        "apiName": "marble-race",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,w_auto,c_scale/Marble%20Race/marble-race-logo-min.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Speed Baccarat A",
+        "apiName": "speed-baccarat-a",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/f_auto,q_auto,w_auto,c_scale/Speed%20Baccarat/speed-baccarat-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Super Andar Bahar",
+        "apiName": "super-andar-bahar",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Andar%20Bahar/super-andar-bahar-logo-min.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Crazy Balls",
+        "apiName": "crazy-balls",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/crazy-balls/crazy_balls_logo_1__new.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Bac Bo",
+        "apiName": "bac-bo",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1740479979/Bac%20Bo/bac-bo-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Lightning Dice",
+        "apiName": "lightning-dice",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/lightning-dice/lightning-dice-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Auto Roulette",
+        "apiName": "auto-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/auto-roulette/auto-roulette-logo_1.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Fireball Roulette",
+        "apiName": "fireball-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/v1746474611/Fireball%20Roulette/fireball-roulette-logo-min.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Super Sic Bo",
+        "apiName": "super-sic-bo",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/SuperSicBo/superSicBoLogoo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Funky Time",
+        "apiName": "funky-time",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,c_scale/CasinoScores/Funky%20Time/funky_time_logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Mega Roulette",
+        "apiName": "mega-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Mega%20Roulette/mega-roulette-logo.png",
+        "provider": "pragmatic-play"
+    },
+    {
+        "name": "Mega Wheel",
+        "apiName": "mega-wheel",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/mega_wheel_logo.png",
+        "provider": "pragmatic-play"
+    },
+    {
+        "name": "Lightning Roulette",
+        "apiName": "lightning-roulette",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/lightning-roulette-thumbnail.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "XXXTreme Lightning Roulette",
+        "apiName": "xxxtreme-lightning-roulette",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/logo-xxxtreme-lightning-roulette.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Red Door Roulette",
+        "apiName": "red-door-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/cms-dev/red_door_roulette_logo_eng_2023_08_7800567d54_1_e3966a2f60.svg",
+        "provider": "evolution"
+    },
+    {
+        "name": "Gold Vault Roulette",
+        "apiName": "gold-vault-roulette",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/GoldVaultRoulette/gold-vault-roulette-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Crazy Coin Flip",
+        "apiName": "crazy-coin-flip",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,f_auto,q_auto,c_scale,h_373,w_457/Coin%20Flip%20Images/ccf-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Immersive Roulette",
+        "apiName": "immersive-roulette",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-immersive-roulette.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Lightning Baccarat",
+        "apiName": "lightning-baccarat",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-lightning-baccarat.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Cash or Crash Live",
+        "apiName": "cash-or-crash-live",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/cash-or-crash-thumbnail.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Fan Tan Live",
+        "apiName": "fan-tan-live",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-fan-tan.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "War Live",
+        "apiName": "war-live",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/cms-prod/logoevo_war_77df58e424.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Mega Ball",
+        "apiName": "mega-ball",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/mega-ball.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Free Bet Blackjack",
+        "apiName": "free-bet-blackjack",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/thumbnail-300x220-free-bet-blackjack.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Extra Chilli Epic Spins",
+        "apiName": "extra-chilli-epic-spins",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Extra%20Chilli%20Epic%20Spins/extra-chilli-epic-spins.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Video Poker",
+        "apiName": "video-poker",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/video-poker/video_poker_logo-min.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Imperial Quest",
+        "apiName": "imperial-quest",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Imperial%20Quest/imperial-quest-thumbnail.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Dead or Alive Saloon",
+        "apiName": "dead-or-alive-saloon",
+        "logo": "https://res.cloudinary.com/dlkdffnou/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/Dead%20Or%20Alive%20-%20Salon/dead-or-alive-logo.png",
+        "provider": "evolution"
+    },
+    {
+        "name": "Live Craps",
+        "apiName": "live-craps",
+        "logo": "https://res.cloudinary.com/casinogrounds/image/upload/dpr_auto,w_auto,f_auto,q_auto,c_scale/CasinoScores/craps-live.png",
+        "provider": "evolution"
+    }
+]
