@@ -1,0 +1,11 @@
+FROM postgres:15-alpine
+
+ENV POSTGRES_DB=casino_tracker
+ENV POSTGRES_USER=casino_user
+ENV POSTGRES_PASSWORD=casino_password
+
+COPY ./init-scripts/ /docker-entrypoint-initdb.d/
+
+EXPOSE 54321
+
+CMD ["postgres"]

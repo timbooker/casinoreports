@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+    postgres:
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile.postgres
+        container_name: casino-tracker-postgres
+        restart: unless-stopped
+        ports:
+            - "54321:54321"
+        environment:
+            POSTGRES_DB: casino_tracker
+            POSTGRES_USER: casino_user
+            POSTGRES_PASSWORD: casino_password
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+            - ./init-scripts:/docker-entrypoint-initdb.d
+        networks:
+            - casino-network
+
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        container_name: casino-tracker-pgadmin
+        restart: unless-stopped
+        ports:
+            - "8080:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: admin@casino-tracker.com
+            PGADMIN_DEFAULT_PASSWORD: admin123
+        volumes:
+            - pgadmin_data:/var/lib/pgadmin
+        networks:
+            - casino-network
+        depends_on:
+            - postgres
+
+volumes:
+    postgres_data:
+        driver: local
+    pgadmin_data:
+        driver: local
+
+networks:
+    casino-network:
+        driver: bridge
