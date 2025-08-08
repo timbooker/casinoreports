@@ -29,6 +29,7 @@ export interface GameResultData {
     third: number;
     value: string;
     total: number;
+    [key: string]: unknown;
 }
 
 export interface LuckyNumber {

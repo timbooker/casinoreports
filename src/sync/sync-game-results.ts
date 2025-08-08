@@ -2,11 +2,12 @@ import axios from "axios";
 import { prisma } from "../prisma";
 import { GameResult } from "../types/game-result";
 import { AxiosResponse } from "axios";
+import { CasinoGame } from "@prisma/client";
 
-async function syncGameResults() {
+export async function syncGameResults() {
     const games = await prisma.casinoGame.findMany();
 
-    await Promise.all(
+    await Promise.allSettled(
         games.map(async (game) => {
             const fetchURL = game.fetch_results_url;
 
@@ -17,55 +18,56 @@ async function syncGameResults() {
 
             const response: AxiosResponse<Array<GameResult>> = await axios.get(fetchURL);
 
-            console.log(response.data);
+            await Promise.allSettled(
+                response.data.map(async (result) => {
+                    await syncGameResult(result, game);
+                })
+            );
         })
     );
-
-    // for (const game of GAME_CONFIGS) {
-    //     try {
-    //         const casinoGame = await prisma.casinoGame.findFirst({ where: { api_name: game.apiName } });
-
-    //         if (!casinoGame) {
-    //             console.warn(`CasinoGame not found for apiName: ${game.apiName}`);
-    //             continue;
-    //         }
-
-    //         const { data } = await axios.get(game.url);
-
-    //         for (const result of data) {
-    //             // Find or create GameResult by externalId and casinoGameId
-    //             let gameResult = await prisma.gameResult.findFirst({
-    //                 where: { externalId: result.id, casinoGameId: casinoGame.id }
-    //             });
-
-    //             const resultData = {
-    //                 externalId: result.id,
-    //                 startedAt: new Date(result.data.startedAt),
-    //                 settledAt: new Date(result.data.settledAt),
-    //                 status: result.data.status,
-    //                 result: result.data.result || {},
-    //                 casinoGameId: casinoGame.id
-    //             };
-
-    //             if (!gameResult) {
-    //                 gameResult = await prisma.gameResult.create({
-    //                     data: resultData
-    //                 });
-    //             } else {
-    //                 gameResult = await prisma.gameResult.update({
-    //                     where: { id: gameResult.id },
-    //                     data: resultData
-    //                 });
-    //             }
-    //         }
-    //     } catch (err) {
-    //         console.error(`Error syncing results for ${game.apiName}:`, err);
-    //     }
-    // }
 }
 
-// Run every minute
-setInterval(syncGameResults, 60 * 1000);
+async function syncGameResult(result: GameResult, game: CasinoGame) {
+    try {
+        const gameResult = await prisma.gameResult.findFirst({
+            where: { external_id: result.id, casino_game_id: game.id }
+        });
 
-// Run immediately on start
-syncGameResults();
+        if (!gameResult) {
+            await prisma.gameResult.create({
+                data: {
+                    casino_game_id: game.id,
+                    external_id: result.id,
+                    started_at: new Date(result.data.startedAt),
+                    settled_at: new Date(result.data.settledAt),
+                    status: result.data.status,
+                    result: JSON.parse(JSON.stringify(result.data.result)),
+                    total_winners: result.totalWinners,
+                    total_amount: result.totalAmount,
+                    winners: JSON.parse(JSON.stringify(result.winners)),
+                    data_raw: JSON.parse(JSON.stringify(result.data))
+                }
+            });
+
+            console.log(`Created game result with id ${result.id} for game: ${game.name}`);
+        } else {
+            await prisma.gameResult.update({
+                where: { id: gameResult.id },
+                data: {
+                    result: JSON.parse(JSON.stringify(result.data.result)),
+                    status: result.data.status,
+                    settled_at: new Date(result.data.settledAt),
+                    started_at: new Date(result.data.startedAt),
+                    total_winners: result.totalWinners,
+                    total_amount: result.totalAmount,
+                    winners: JSON.parse(JSON.stringify(result.winners)),
+                    data_raw: JSON.parse(JSON.stringify(result.data))
+                }
+            });
+
+            console.log(`Updated game result with id ${result.id} for game: ${game.name}`);
+        }
+    } catch (error) {
+        console.error(`Error syncing game result with id ${result.id} for game: ${game.name}`, error);
+    }
+}
