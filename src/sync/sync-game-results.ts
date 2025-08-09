@@ -85,3 +85,5 @@ async function syncGameResult(result: GameResult, game: CasinoGame) {
         throw error;
     }
 }
+
+main();
