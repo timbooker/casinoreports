@@ -186,19 +186,19 @@ GamesRouter.get("/games/name/:name", async (req: Request, res: Response) => {
  *         required: false
  *         schema:
  *           type: number
- *         description: The number of results to return (default: 10)
+ *         description: "The number of results to return (default: 10)"
  *       - in: query
  *         name: duration
  *         required: false
  *         schema:
  *           type: number
- *         description: The duration of the results to return (default: 12) in hours (max: 30 * 24). Example: 3 days = 3 * 24 = 72
+ *         description: "Duration in hours to return results (default: 12, max: 720). Example: 3 days = 72 hours"
  *       - in: query
  *         name: page
  *         required: false
  *         schema:
  *           type: number
- *         description: The page number to return (default: 0)
+ *         description: "The page number to return (default: 0)"
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -413,14 +413,14 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
  *         default: 10
  *         schema:
  *           type: number
- *         description: The number of results to return (default: 10)
+ *         description: "The number of results to return (default: 10)"
  *       - in: query
  *         name: duration
  *         required: false
  *         default: 12
  *         schema:
  *           type: number
- *         description: The duration of the results to return (default: 12) in hours (max: 30 * 24). Example: 3 days = 3 * 24 = 72
+ *         description: "Duration in hours to return results (default: 12, max: 720). Example: 3 days = 72 hours"
  *       - in: query
  *         name: page
  *         required: false
