@@ -186,19 +186,19 @@ GamesRouter.get("/games/name/:name", async (req: Request, res: Response) => {
  *         required: false
  *         schema:
  *           type: number
- *         description: The number of results to return
+ *         description: The number of results to return (default: 10)
  *       - in: query
  *         name: duration
  *         required: false
  *         schema:
  *           type: number
- *         description: The duration of the results to return
+ *         description: The duration of the results to return (default: 12) in hours (max: 30 * 24). Example: 3 days = 3 * 24 = 72
  *       - in: query
  *         name: page
  *         required: false
  *         schema:
  *           type: number
- *         description: The page number to return
+ *         description: The page number to return (default: 0)
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -267,7 +267,7 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
  * /api/games/{id}/results/latest:
  *   get:
  *     summary: Get the latest results for a casino game by ID
- *     description: Retrieves the latest results for a specific casino game by its unique identifier
+ *     description: Retrieves the latest results for a specific casino game by its unique identifier. By default, the latest results are the most recent 10 results sorted by settledAt in descending order.
  *     tags: [Casino Games]
  *     parameters:
  *       - in: path
@@ -276,13 +276,6 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
  *         schema:
  *           type: string
  *         description: The casino game ID
- *       - in: query
- *         name: duration
- *         required: false
- *         default: 6
- *         schema:
- *           type: number
- *         description: The duration of the results to return (default: 6)
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -420,14 +413,14 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
  *         default: 10
  *         schema:
  *           type: number
- *         description: The number of results to return
+ *         description: The number of results to return (default: 10)
  *       - in: query
  *         name: duration
  *         required: false
  *         default: 12
  *         schema:
  *           type: number
- *         description: The duration of the results to return
+ *         description: The duration of the results to return (default: 12) in hours (max: 30 * 24). Example: 3 days = 3 * 24 = 72
  *       - in: query
  *         name: page
  *         required: false
@@ -502,7 +495,7 @@ GamesRouter.get("/games/name/:name/results", async (req: Request, res: Response)
  * /api/games/name/{name}/results/latest:
  *   get:
  *     summary: Get the latest results for a casino game by name or api_name
- *     description: Retrieves the latest results for a specific casino game by its name or api_name
+ *     description: Retrieves the latest results for a specific casino game by its name or api_name. By default, the latest results are the most recent 10 results sorted by settledAt in descending order.
  *     tags: [Casino Games]
  *     parameters:
  *       - in: path
