@@ -1,13 +1,12 @@
 import { Router, Request, Response } from "express";
 import axios from "axios";
 import { getCacheProvider } from "../cache";
-import cmsDocuments from "../payload/cms/documents1.json";
-import navMenu from "../payload/cms/menu.json";
 import { GamesRouter } from "./games.route";
 import BiggestWinsRouter from "./biggest-wins.route";
 import PlayersRouter from "./players.route";
 import { CASINO_SCORE_BASE_URL } from "../constants/casino.api";
 import CMSRouter from "./cms.route";
+import SimulatorRouter from "./simulator.route";
 
 const router = Router();
 const cache = getCacheProvider();
@@ -57,6 +56,7 @@ router.use(GamesRouter);
 router.use(BiggestWinsRouter);
 router.use(PlayersRouter);
 router.use(CMSRouter);
+router.use(SimulatorRouter);
 
 /**
  * @swagger

@@ -1,7 +1,11 @@
 import { Request, Response } from "express";
 import { Router } from "express";
 import { PrismaClient } from "@prisma/client";
-import { CASINO_SCORE_GAME_EVENTS_BASE_URL, CommonHeaders } from "../constants/casino.api";
+import {
+    CASINO_GAME_SIMULATOR_BASE_URL,
+    CASINO_SCORE_GAME_EVENTS_BASE_URL,
+    CommonHeaders
+} from "../constants/casino.api";
 import axios from "axios";
 import { getPageParams } from "../utils/get-page-params";
 
