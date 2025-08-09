@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { Router } from "express";
 import { PrismaClient } from "@prisma/client";
+import { CASINO_SCORE_GAME_EVENTS_BASE_URL, CommonHeaders } from "../constants/casino.api";
+import axios from "axios";
 
 export const GamesRouter = Router();
 const prisma = new PrismaClient();
@@ -287,6 +289,65 @@ GamesRouter.get("/games/:id/results/latest", async (req: Request, res: Response)
 
 /**
  * @swagger
+ * /api/games/{id}/stats:
+ *   get:
+ *     summary: Get the stats for a casino game by ID
+ *     description: Retrieves the stats for a specific casino game by its unique identifier
+ *     tags: [Casino Games]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The casino game ID
+ *     responses:
+ *       200:
+ *         description: Casino game stats retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *       500:
+ *         description: Failed to fetch casino game stats
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ */
+GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
+    try {
+        const game = await prisma.casinoGame.findUnique({ where: { id: req.params.id } });
+
+        if (!game) {
+            res.status(404).json({ error: "Casino game not found.", id: req.params.id });
+            return;
+        }
+
+        const params = new URLSearchParams({
+            sort: "hotFrequency"
+        });
+
+        const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
+    } catch (error) {
+        console.error("Error fetching casino game stats:", error);
+        res.status(500).json({ error: "Failed to fetch casino game stats." });
+    }
+});
+
+/**
+ * @swagger
  * /api/games/name/{name}/results:
  *   get:
  *     summary: Get all results for a casino game by name or api_name
@@ -414,6 +475,69 @@ GamesRouter.get("/games/name/:name/results/latest", async (req: Request, res: Re
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
+    }
+});
+
+/**
+ * @swagger
+ * /api/games/name/{name}/stats:
+ *   get:
+ *     summary: Get the stats for a casino game by name or api_name
+ *     description: Retrieves the stats for a specific casino game by its name or api_name
+ *     tags: [Casino Games]
+ *     parameters:
+ *       - in: path
+ *         name: name
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The casino game name or api_name
+ *     responses:
+ *       200:
+ *         description: Casino game stats retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *       500:
+ *         description: Failed to fetch casino game stats
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ */
+GamesRouter.get("/games/name/:name/stats", async (req: Request, res: Response) => {
+    try {
+        const game = await prisma.casinoGame.findFirst({
+            where: {
+                OR: [{ name: req.params.name }, { api_name: req.params.name }]
+            }
+        });
+
+        if (!game) {
+            res.status(404).json({ error: "Casino game not found.", name: req.params.name });
+            return;
+        }
+
+        const params = new URLSearchParams({
+            sort: "hotFrequency"
+        });
+
+        const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
+    } catch (error) {
+        console.error("Error fetching casino game stats:", error);
+        res.status(500).json({ error: "Failed to fetch casino game stats." });
     }
 });
 

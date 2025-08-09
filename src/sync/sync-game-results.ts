@@ -18,7 +18,13 @@ export async function syncGameResults() {
                 return;
             }
 
-            const response: AxiosResponse<Array<GameResult>> = await axios.get(fetchURL);
+            const params = new URLSearchParams({
+                size: "10",
+                sort: "data.settledAt,desc"
+            });
+
+            const URL = `${fetchURL}?${params.toString()}`;
+            const response: AxiosResponse<Array<GameResult>> = await axios.get(URL);
 
             await Promise.allSettled(
                 response.data.map(async (result) => {
