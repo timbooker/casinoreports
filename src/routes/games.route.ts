@@ -3,9 +3,13 @@ import { Router } from "express";
 import { PrismaClient } from "@prisma/client";
 import { CASINO_SCORE_GAME_EVENTS_BASE_URL, CommonHeaders } from "../constants/casino.api";
 import axios from "axios";
+import { getPageParams } from "../utils/get-page-params";
 
 export const GamesRouter = Router();
 const prisma = new PrismaClient();
+
+const MAX_SIZE = 100;
+const MAX_DURATION = 30 * 24;
 
 /**
  * @swagger
@@ -177,6 +181,24 @@ GamesRouter.get("/games/name/:name", async (req: Request, res: Response) => {
  *         schema:
  *           type: string
  *         description: The casino game ID
+ *       - in: query
+ *         name: size
+ *         required: false
+ *         schema:
+ *           type: number
+ *         description: The number of results to return
+ *       - in: query
+ *         name: duration
+ *         required: false
+ *         schema:
+ *           type: number
+ *         description: The duration of the results to return
+ *       - in: query
+ *         name: page
+ *         required: false
+ *         schema:
+ *           type: number
+ *         description: The page number to return
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -214,9 +236,26 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
             return;
         }
 
-        const results = await prisma.gameResult.findMany({ where: { casino_game_id: game.id } });
+        if (!game.fetch_results_url) {
+            res.status(404).json({ error: "Casino game fetch results URL not found.", id: req.params.id });
+            return;
+        }
 
-        res.json(results);
+        const { size, duration, page } = getPageParams(req, MAX_SIZE, MAX_DURATION);
+
+        const params = new URLSearchParams({
+            size: size.toString(),
+            sort: "data.settledAt,desc",
+            duration: duration.toString(),
+            page: page.toString()
+        });
+
+        const URL = `${game.fetch_results_url}?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -237,6 +276,13 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
  *         schema:
  *           type: string
  *         description: The casino game ID
+ *       - in: query
+ *         name: duration
+ *         required: false
+ *         default: 6
+ *         schema:
+ *           type: number
+ *         description: The duration of the results to return (default: 6)
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -274,13 +320,21 @@ GamesRouter.get("/games/:id/results/latest", async (req: Request, res: Response)
             return;
         }
 
-        const results = await prisma.gameResult.findMany({
-            where: { casino_game_id: game.id },
-            orderBy: { settled_at: "desc" },
-            take: 10
+        const duration = Number(req.query.duration) || 6;
+
+        const params = new URLSearchParams({
+            size: "10",
+            page: "0",
+            sort: "data.settledAt,desc",
+            duration: duration.toString()
         });
 
-        res.json(results);
+        const URL = `${game.fetch_results_url}?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -351,7 +405,7 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
  * /api/games/name/{name}/results:
  *   get:
  *     summary: Get all results for a casino game by name or api_name
- *     description: Retrieves all results for a specific casino game by its name or api_name
+ *     description: Retrieves all results for a specific casino game by its name or api_name. The results are sorted by settledAt in descending order, returning the most recent results.
  *     tags: [Casino Games]
  *     parameters:
  *       - in: path
@@ -360,6 +414,27 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
  *         schema:
  *           type: string
  *         description: The casino game name or api_name
+ *       - in: query
+ *         name: size
+ *         required: false
+ *         default: 10
+ *         schema:
+ *           type: number
+ *         description: The number of results to return
+ *       - in: query
+ *         name: duration
+ *         required: false
+ *         default: 12
+ *         schema:
+ *           type: number
+ *         description: The duration of the results to return
+ *       - in: query
+ *         name: page
+ *         required: false
+ *         default: 0
+ *         schema:
+ *           type: number
+ *         description: The page number to return
  *     responses:
  *       200:
  *         description: Casino game results retrieved successfully
@@ -401,9 +476,21 @@ GamesRouter.get("/games/name/:name/results", async (req: Request, res: Response)
             return;
         }
 
-        const results = await prisma.gameResult.findMany({ where: { casino_game_id: game.id } });
+        const { size, duration, page } = getPageParams(req, MAX_SIZE, MAX_DURATION);
 
-        res.json(results);
+        const params = new URLSearchParams({
+            size: size.toString(),
+            sort: "data.settledAt,desc",
+            duration: duration.toString(),
+            page: page.toString()
+        });
+
+        const URL = `${game.fetch_results_url}?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -465,13 +552,23 @@ GamesRouter.get("/games/name/:name/results/latest", async (req: Request, res: Re
             return;
         }
 
-        const results = await prisma.gameResult.findMany({
-            where: { casino_game_id: game.id },
-            orderBy: { settled_at: "desc" },
-            take: 10
+        if (!game.fetch_results_url) {
+            res.status(404).json({ error: "Casino game fetch results URL not found.", name: req.params.name });
+            return;
+        }
+
+        const params = new URLSearchParams({
+            size: "10",
+            page: "0",
+            sort: "data.settledAt,desc"
         });
 
-        res.json(results);
+        const URL = `${game.fetch_results_url}?${params.toString()}`;
+        const response = await axios.get(URL, {
+            headers: CommonHeaders
+        });
+
+        res.json(response.data);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -540,7 +637,5 @@ GamesRouter.get("/games/name/:name/stats", async (req: Request, res: Response) =
         res.status(500).json({ error: "Failed to fetch casino game stats." });
     }
 });
-
-// https://api.casinoscores.com/cg-neptune-game-show-simulator/api/simulator/ct
 
 export default GamesRouter;
