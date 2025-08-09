@@ -1,22 +1,21 @@
 import { Router, Request, Response } from "express";
 import axios from "axios";
 import { getCacheProvider } from "../cache";
-import { PrismaClient } from "@prisma/client";
 import cmsDocuments from "../payload/cms/documents1.json";
 import navMenu from "../payload/cms/menu.json";
 import { GamesRouter } from "./games.route";
 import BiggestWinsRouter from "./biggest-wins.route";
+import PlayersRouter from "./players.route";
+import { CASINO_SCORE_BASE_URL } from "../constants/casino.api";
+import CMSRouter from "./cms.route";
 
 const router = Router();
 const cache = getCacheProvider();
-const prisma = new PrismaClient();
 
 const PLAYERCOUNT_CACHE_SECONDS = parseInt(process.env.PLAYERCOUNT_CACHE_SECONDS || "", 10) || 10;
 const CRAZYTIME_CACHE_SECONDS = parseInt(process.env.CRAZYTIME_CACHE_SECONDS || "", 10) || 30;
 const GAME_RESULTS_CACHE_SECONDS = parseInt(process.env.GAME_RESULTS_CACHE_SECONDS || "", 10) || 30;
-const CASINO_SCORE_URL = "https://api.casinoscores.com";
 
-// Common headers for API requests
 const getApiHeaders = () => ({
     "User-Agent": "casino-tracker/1.0",
     Accept: "application/json",
@@ -56,6 +55,8 @@ async function cacheAndFetch(
 
 router.use(GamesRouter);
 router.use(BiggestWinsRouter);
+router.use(PlayersRouter);
+router.use(CMSRouter);
 
 /**
  * @swagger
@@ -137,93 +138,13 @@ router.get("/geo/identify", async (req: Request, res: Response) => {
         cacheKey,
         30, // cache TTL in seconds (adjust as needed)
         async () => {
-            const response = await axios.get(`${CASINO_SCORE_URL}/neptune-svc-geo/api/geo/identify`, {
+            const response = await axios.get(`${CASINO_SCORE_BASE_URL}/neptune-svc-geo/api/geo/identify`, {
                 params: { ip },
                 headers: getApiHeaders()
             });
             return response.data;
         },
         `geo identify for ${ip}`
-    );
-});
-
-/**
- * @swagger
- * /api/menu:
- *   get:
- *     summary: Get navigation menu
- *     description: Retrieves the navigation menu structure for the casino application
- *     tags: [CMS]
- *     responses:
- *       200:
- *         description: Menu data retrieved successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- */
-router.get("/menu", async (_req: Request, res: Response) => {
-    res.json(navMenu);
-});
-
-/**
- * @swagger
- * /api/cms/documents:
- *   get:
- *     summary: Get CMS documents
- *     description: Retrieves CMS documents and content
- *     tags: [CMS]
- *     responses:
- *       200:
- *         description: CMS documents retrieved successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- */
-router.get("/cms/documents", async (_req: Request, res: Response) => {
-    res.json(cmsDocuments);
-});
-
-/**
- * @swagger
- * /api/playercount/latest:
- *   get:
- *     summary: Get latest player count
- *     description: Retrieves the current number of players across all casino games
- *     tags: [Player Data]
- *     responses:
- *       200:
- *         description: Player count retrieved successfully
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/PlayerCount'
- *       500:
- *         description: Failed to fetch player count
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- */
-router.get("/playercount/latest", async (_req: Request, res: Response) => {
-    await cacheAndFetch(
-        res,
-        "playercount:latest",
-        PLAYERCOUNT_CACHE_SECONDS,
-        async () => {
-            const response = await axios.get(
-                `${CASINO_SCORE_URL}/cg-neptune-notification-center/api/evolobby/playercount/latest`,
-                {
-                    headers: getApiHeaders()
-                }
-            );
-            return response.data;
-        },
-        "playercount"
     );
 });
 
