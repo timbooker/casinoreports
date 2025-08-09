@@ -1,0 +1,18 @@
+export const GAME_SHOWS = [
+    "CRAZY_TIME",
+    "CRAZY_TIME_A",
+    "MONOPOLY_LIVE",
+    "CASH_OR_CRASH_LIVE",
+    "LIGHTNING_BACCARAT",
+    "MONOPOLY_BIG_BALLER",
+    "FUNKY_TIME",
+    "RED_DOOR_ROULETTE",
+    "SWEET_BONANZA_CANDYLAND",
+    "MEGA_ROULETTE",
+    "TREASURE_ISLAND",
+    "LIGHTNING_STORM",
+    "ADVENTURE_BEYOND_WONDERLAND",
+    "FIREBALL_ROULETTE"
+] as const;
+
+export type GameShow = (typeof GAME_SHOWS)[number];

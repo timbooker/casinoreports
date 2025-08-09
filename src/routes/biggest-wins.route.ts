@@ -1,27 +1,13 @@
 import axios, { AxiosResponse } from "axios";
 import { Router, Request, Response } from "express";
 import { GameShowWin } from "../types/game-show-win";
-
-const GAME_SHOWS = [
-    "CRAZY_TIME",
-    "CRAZY_TIME_A",
-    "MONOPOLY_LIVE",
-    "CASH_OR_CRASH_LIVE",
-    "LIGHTNING_BACCARAT",
-    "MONOPOLY_BIG_BALLER",
-    "FUNKY_TIME",
-    "RED_DOOR_ROULETTE",
-    "SWEET_BONANZA_CANDYLAND",
-    "MEGA_ROULETTE",
-    "TREASURE_ISLAND",
-    "LIGHTNING_STORM",
-    "ADVENTURE_BEYOND_WONDERLAND",
-    "FIREBALL_ROULETTE"
-];
+import { CASINO_SCORE_BASE_URL } from "../constants/casino.api";
+import { GAME_SHOWS } from "../constants/game-shows";
 
 const BiggestWinsRouter = Router();
 
-const URL = "https://api.casinoscores.com/cg-neptune-notification-center/api/halloffame/latest";
+const MAX_DURATION_IN_HOURS = 30 * 24; // 30 days
+const MAX_SIZE = 10;
 
 /**
  * @swagger
@@ -64,8 +50,16 @@ const URL = "https://api.casinoscores.com/cg-neptune-notification-center/api/hal
  */
 BiggestWinsRouter.get("/biggest-wins/latest", async (req: Request, res: Response) => {
     try {
-        const size = Number(req.query.size) || 4; // number of wins to return
-        const duration = Number(req.query.duration) || 1; // in hours
+        let size = Number(req.query.size) || 4; // number of wins to return
+        let duration = Number(req.query.duration) || 24; // in hours
+
+        if (duration > MAX_DURATION_IN_HOURS) {
+            duration = MAX_DURATION_IN_HOURS;
+        }
+
+        if (size > MAX_SIZE) {
+            size = MAX_SIZE;
+        }
 
         const params = new URLSearchParams({
             size: size.toString(),
@@ -76,6 +70,7 @@ BiggestWinsRouter.get("/biggest-wins/latest", async (req: Request, res: Response
         params.append("sort", "multiplier,desc");
         params.append("sort", "settledAt,desc");
 
+        const URL = `${CASINO_SCORE_BASE_URL}/cg-neptune-notification-center/api/halloffame/latest`;
         const response: AxiosResponse<Array<GameShowWin>> = await axios.get(`${URL}?${params.toString()}`);
 
         res.status(200).json(response.data);
