@@ -8,7 +8,9 @@
         "build": "tsc && npx prisma generate",
         "postinstall": "npm run build",
         "format": "prettier --write \"src/**/*.ts\"",
-        "seed": "ts-node prisma/seed.ts"
+        "seed": "ts-node prisma/seed.ts",
+        "sync": "node dist/sync/main.js",
+        "sync:30s": "npm run sync && sleep 30 && npm run sync"
     },
     "dependencies": {
         "@prisma/client": "^6.13.0",
