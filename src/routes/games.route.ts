@@ -541,4 +541,6 @@ GamesRouter.get("/games/name/:name/stats", async (req: Request, res: Response) =
     }
 });
 
+// https://api.casinoscores.com/cg-neptune-game-show-simulator/api/simulator/ct
+
 export default GamesRouter;

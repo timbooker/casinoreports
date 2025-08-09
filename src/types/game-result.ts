@@ -14,6 +14,7 @@ export interface GameData {
     gameType: string;
     table: Table;
     result: GameResultData;
+    [key: string]: unknown;
 }
 
 export interface Table {
@@ -40,6 +41,7 @@ export interface LuckyNumber {
 export interface Winner {
     screenName: string;
     winnings: number;
+    [key: string]: unknown;
 }
 
 export interface WheelResult {

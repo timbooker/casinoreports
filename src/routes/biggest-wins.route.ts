@@ -22,13 +22,13 @@ const MAX_SIZE = 10;
  *         required: false
  *         schema:
  *           type: number
- *         description: Number of wins to return
+ *         description: Number of wins to return (max 10)
  *       - in: query
  *         name: duration
  *         required: false
  *         schema:
  *           type: number
- *         description: Duration in hours
+ *         description: Duration in hours (max 30 days = 720 hours)
  *     responses:
  *       200:
  *         description: Biggest wins retrieved successfully

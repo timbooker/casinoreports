@@ -44,4 +44,6 @@ model GameResult {
   casino_game    CasinoGame @relation(fields: [casino_game_id], references: [id])
   created_at     DateTime   @default(now())
   updated_at     DateTime   @updatedAt
+
+  @@unique([casino_game_id, external_id])
 }
