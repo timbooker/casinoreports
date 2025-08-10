@@ -33,11 +33,7 @@ SimulatorRouter.get("/simulator/ct", async (req: Request, res: Response) => {
         const URL = `${CASINO_GAME_SIMULATOR_BASE_URL}/ct`;
         const response = await axios.get(URL, {
             headers: {
-                "Content-Type": "application/json",
-                "User-Agent":
-                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
-                Origin: "https://casinoscores.com",
-                Referer: "https://casinoscores.com/"
+                "Content-Type": "application/json"
             }
         });
 
