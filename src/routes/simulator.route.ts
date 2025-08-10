@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
 import { CASINO_GAME_SIMULATOR_BASE_URL, CommonHeaders } from "../constants/casino.api";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const SimulatorRouter = Router();
 
@@ -32,13 +32,21 @@ SimulatorRouter.get("/simulator/ct", async (req: Request, res: Response) => {
     try {
         const URL = `${CASINO_GAME_SIMULATOR_BASE_URL}/ct`;
         const response = await axios.get(URL, {
-            headers: CommonHeaders
+            headers: {
+                "Content-Type": "application/json"
+            }
         });
 
-        res.json(response.data);
+        res.status(200).json(response.data);
     } catch (error) {
         console.error("Error fetching casino game simulator:", error);
-        res.status(500).json({ error: "Failed to fetch casino game simulator." });
+
+        if (error instanceof AxiosError && error.response) {
+            console.error(error.response.data);
+            res.status(500).json({ error: "Failed to fetch casino game simulator." });
+        } else {
+            res.status(500).json({ error: "Failed to fetch casino game simulator." });
+        }
     }
 });
 
