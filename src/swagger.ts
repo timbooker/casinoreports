@@ -14,12 +14,12 @@ export const SwaggerOptions = {
         },
         servers: [
             {
-                url: "https://casinoreports.onrender.com",
-                description: "Production API"
+                url: "https://casinoreports-vdmg.onrender.com/",
+                description: "Production Server"
             },
             {
                 url: `http://localhost:${PORT}`,
-                description: "Development API"
+                description: "Development Server"
             }
         ],
         components: {
