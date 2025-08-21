@@ -1,12 +1,7 @@
 import { Request, Response } from "express";
 import { Router } from "express";
 import { PrismaClient } from "@prisma/client";
-import {
-    CASINO_GAME_SIMULATOR_BASE_URL,
-    CASINO_SCORE_GAME_EVENTS_BASE_URL,
-    CommonHeaders
-} from "../constants/casino.api";
-import axios from "axios";
+import { CASINO_SCORE_GAME_EVENTS_BASE_URL, createBrightDataAxiosInstance } from "../constants/casino.api";
 import { getPageParams } from "../utils/get-page-params";
 
 export const GamesRouter = Router();
@@ -255,9 +250,8 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
         });
 
         const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {
@@ -327,9 +321,8 @@ GamesRouter.get("/games/:id/results/latest", async (req: Request, res: Response)
         });
 
         const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {
@@ -386,9 +379,8 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
         });
 
         const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {
@@ -483,9 +475,8 @@ GamesRouter.get("/games/name/:name/results", async (req: Request, res: Response)
         });
 
         const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {
@@ -561,9 +552,8 @@ GamesRouter.get("/games/name/:name/results/latest", async (req: Request, res: Re
         });
 
         const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {
@@ -624,9 +614,8 @@ GamesRouter.get("/games/name/:name/stats", async (req: Request, res: Response) =
         });
 
         const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {

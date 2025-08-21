@@ -1,14 +1,7 @@
-import axios from "axios";
 import { Request, Response, Router } from "express";
-import { CASINO_SCORE_BASE_URL } from "../constants/casino.api";
+import { CASINO_SCORE_BASE_URL, createBrightDataAxiosInstance } from "../constants/casino.api";
 
 const PlayersRouter = Router();
-
-const CommonHeaders = {
-    "User-Agent": "casino-tracker/1.0",
-    Accept: "application/json",
-    "Content-Type": "application/json"
-};
 
 /**
  * @swagger
@@ -37,9 +30,8 @@ const CommonHeaders = {
 PlayersRouter.get("/playercount/latest", async (_req: Request, res: Response) => {
     try {
         const URL = `${CASINO_SCORE_BASE_URL}/cg-neptune-notification-center/api/evolobby/playercount/latest`;
-        const response = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response = await casinoAxios.get(URL);
 
         res.json(response.data);
     } catch (error) {

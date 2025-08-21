@@ -1,9 +1,8 @@
-import axios from "axios";
+import { CasinoGame, Prisma } from "@prisma/client";
 import { prisma } from "../prisma";
 import { GameResult } from "../types/game-result";
 import { AxiosResponse } from "axios";
-import { CasinoGame, Prisma } from "@prisma/client";
-import { CommonHeaders } from "../constants/casino.api";
+import { createBrightDataAxiosInstance } from "../constants/casino.api";
 
 export async function main() {
     console.log("Syncing Casino Game results...");
@@ -40,9 +39,8 @@ export async function syncGameResults(game: CasinoGame) {
         });
 
         const URL = `${fetchURL}?${params.toString()}`;
-        const response: AxiosResponse<Array<GameResult>> = await axios.get(URL, {
-            headers: CommonHeaders
-        });
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response: AxiosResponse<Array<GameResult>> = await casinoAxios.get(URL);
 
         await Promise.allSettled(
             response.data.map(async (result) => {

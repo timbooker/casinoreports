@@ -1,7 +1,7 @@
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 import { Router, Request, Response } from "express";
 import { GameShowWin } from "../types/game-show-win";
-import { CASINO_SCORE_BASE_URL } from "../constants/casino.api";
+import { CASINO_SCORE_BASE_URL, createBrightDataAxiosInstance } from "../constants/casino.api";
 import { GAME_SHOWS } from "../constants/game-shows";
 
 const BiggestWinsRouter = Router();
@@ -71,7 +71,8 @@ BiggestWinsRouter.get("/biggest-wins/latest", async (req: Request, res: Response
         params.append("sort", "settledAt,desc");
 
         const URL = `${CASINO_SCORE_BASE_URL}/cg-neptune-notification-center/api/halloffame/latest`;
-        const response: AxiosResponse<Array<GameShowWin>> = await axios.get(`${URL}?${params.toString()}`);
+        const casinoAxios = createBrightDataAxiosInstance();
+        const response: AxiosResponse<Array<GameShowWin>> = await casinoAxios.get(`${URL}?${params.toString()}`);
 
         res.status(200).json(response.data);
     } catch (error) {
