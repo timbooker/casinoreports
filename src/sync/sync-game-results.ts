@@ -39,6 +39,7 @@ export async function syncGameResults(game: CasinoGame) {
         });
 
         const URL = `${fetchURL}?${params.toString()}`;
+        console.log("Fetching URL", URL);
         const casinoAxios = createBrightDataAxiosInstance();
         const response: AxiosResponse<Array<GameResult>> = await casinoAxios.get(URL);
 
