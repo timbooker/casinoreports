@@ -1,7 +1,7 @@
 import { CasinoGame, Prisma } from "@prisma/client";
 import { prisma } from "../prisma";
 import { GameResult } from "../types/game-result";
-import { AxiosResponse } from "axios";
+import { AxiosError, AxiosResponse } from "axios";
 import { createBrightDataAxiosInstance } from "../constants/casino.api";
 
 export async function main() {
@@ -49,7 +49,14 @@ export async function syncGameResults(game: CasinoGame) {
             })
         );
     } catch (error) {
-        console.error(`Error syncing game results for game: ${game.name}`, error);
+        console.error(`Error syncing game results for game: ${game.name}`);
+
+        if (error instanceof AxiosError) {
+            console.error("Error response status:", error.response?.status);
+            console.error("Error response data:", error.response?.data);
+        } else {
+            console.error(error);
+        }
     }
 }
 
