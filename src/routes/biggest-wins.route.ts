@@ -1,8 +1,7 @@
-import { AxiosResponse } from "axios";
 import { Router, Request, Response } from "express";
-import { GameShowWin } from "../types/game-show-win";
-import { CASINO_SCORE_BASE_URL, createBrightDataAxiosInstance } from "../constants/casino.api";
+import { prisma } from "../prisma";
 import { GAME_SHOWS } from "../constants/game-shows";
+import { getBiggestWins } from "../utils/aggregate-game-stats";
 
 const BiggestWinsRouter = Router();
 
@@ -61,20 +60,53 @@ BiggestWinsRouter.get("/biggest-wins/latest", async (req: Request, res: Response
             size = MAX_SIZE;
         }
 
-        const params = new URLSearchParams({
-            size: size.toString(),
-            duration: duration.toString(),
-            gameShows: GAME_SHOWS.join(",")
+        const now = new Date();
+        const durationDate = new Date(now.getTime() - duration * 60 * 60 * 1000);
+
+        // Convert game show names to api_name format (lowercase, replace underscores)
+        const gameShowApiNames = GAME_SHOWS.map(show => 
+            show.toLowerCase().replace(/_/g, "")
+        );
+
+        // Find games that match the game shows
+        const games = await prisma.casinoGame.findMany({
+            where: {
+                api_name: {
+                    in: gameShowApiNames
+                }
+            }
         });
 
-        params.append("sort", "multiplier,desc");
-        params.append("sort", "settledAt,desc");
+        if (games.length === 0) {
+            res.status(200).json([]);
+            return;
+        }
 
-        const URL = `${CASINO_SCORE_BASE_URL}/cg-neptune-notification-center/api/halloffame/latest`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response: AxiosResponse<Array<GameShowWin>> = await casinoAxios.get(`${URL}?${params.toString()}`);
+        const gameIds = games.map((g: { id: string }) => g.id);
+        const gameMap = new Map<string, string>(
+            games.map((g: { id: string; api_name: string }) => [g.id, g.api_name])
+        );
 
-        res.status(200).json(response.data);
+        // Get all results with multipliers, ordered by settledAt
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: {
+                    in: gameIds
+                },
+                settled_at: {
+                    gte: durationDate
+                }
+            },
+            orderBy: [
+                { settled_at: "desc" }
+            ],
+            take: size * 20 // Get more to filter by multiplier
+        });
+
+        // Transform and get biggest wins using utility function
+        const wins = getBiggestWins(results, gameMap, size);
+
+        res.status(200).json(wins);
     } catch (error) {
         console.error("Error fetching biggest wins:", error);
         res.status(500).json({ error: "Failed to fetch biggest wins." });

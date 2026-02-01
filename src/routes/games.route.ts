@@ -3,6 +3,7 @@ import { Router } from "express";
 import { PrismaClient } from "@prisma/client";
 import { CASINO_SCORE_GAME_EVENTS_BASE_URL, createBrightDataAxiosInstance } from "../constants/casino.api";
 import { getPageParams } from "../utils/get-page-params";
+import { aggregateGameStats, transformGameResult } from "../utils/aggregate-game-stats";
 
 export const GamesRouter = Router();
 const prisma = new PrismaClient();
@@ -235,25 +236,29 @@ GamesRouter.get("/games/:id/results", async (req: Request, res: Response) => {
             return;
         }
 
-        if (!game.fetch_results_url) {
-            res.status(404).json({ error: "Casino game fetch results URL not found.", id: req.params.id });
-            return;
-        }
-
         const { size, duration, page } = getPageParams(req, MAX_SIZE, MAX_DURATION);
+        const now = new Date();
+        const durationDate = new Date(now.getTime() - duration * 60 * 60 * 1000);
+        const skip = page > 0 ? (page - 1) * size : 0;
 
-        const params = new URLSearchParams({
-            size: size.toString(),
-            sort: "data.settledAt,desc",
-            duration: duration.toString(),
-            page: page.toString()
+        // Fetch results from database with pagination
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: durationDate
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            },
+            skip: skip,
+            take: size
         });
+        // Transform results to match the expected format
+        const transformedResults = results.map((result: any) => transformGameResult(result));
 
-        const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
-
-        res.json(response.data);
+        res.json(transformedResults);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -312,19 +317,27 @@ GamesRouter.get("/games/:id/results/latest", async (req: Request, res: Response)
         }
 
         const duration = Number(req.query.duration) || 6;
+        const now = new Date();
+        const durationDate = new Date(now.getTime() - duration * 60 * 60 * 1000);
 
-        const params = new URLSearchParams({
-            size: "10",
-            page: "0",
-            sort: "data.settledAt,desc",
-            duration: duration.toString()
+        // Fetch latest results from database
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: durationDate
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            },
+            take: 10
         });
 
-        const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
+        // Transform results to match the expected format
+        const transformedResults = results.map((result: any) => transformGameResult(result));
 
-        res.json(response.data);
+        res.json(transformedResults);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -374,18 +387,29 @@ GamesRouter.get("/games/:id/stats", async (req: Request, res: Response) => {
             return;
         }
 
-        const params = new URLSearchParams({
-            sort: "hotFrequency"
+        const durationHours = req.query.duration ? Number(req.query.duration) : undefined;
+        const now = new Date();
+        const duration = durationHours ? new Date(now.getTime() - durationHours * 60 * 60 * 1000) : new Date(0);
+
+        // Fetch all game results
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: duration
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            }
         });
 
-        const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
+        const stats = aggregateGameStats(results);
 
-        res.json(response.data);
+        res.json(stats);
     } catch (error) {
-        console.error("Error fetching casino game stats:", error);
-        res.status(500).json({ error: "Failed to fetch casino game stats." });
+        console.error("Error aggregating casino game stats:", error);
+        res.status(500).json({ error: "Failed to aggregate casino game stats." });
     }
 });
 
@@ -466,19 +490,29 @@ GamesRouter.get("/games/name/:name/results", async (req: Request, res: Response)
         }
 
         const { size, duration, page } = getPageParams(req, MAX_SIZE, MAX_DURATION);
+        const now = new Date();
+        const durationDate = new Date(now.getTime() - duration * 60 * 60 * 1000);
+        const skip = page > 0 ? (page - 1) * size : 0;
 
-        const params = new URLSearchParams({
-            size: size.toString(),
-            sort: "data.settledAt,desc",
-            duration: duration.toString(),
-            page: page.toString()
+        // Fetch results from database with pagination
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: durationDate
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            },
+            skip: skip,
+            take: size
         });
 
-        const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
+        // Transform results to match the expected format
+        const transformedResults = results.map((result: any) => transformGameResult(result));
 
-        res.json(response.data);
+        res.json(transformedResults);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -540,22 +574,28 @@ GamesRouter.get("/games/name/:name/results/latest", async (req: Request, res: Re
             return;
         }
 
-        if (!game.fetch_results_url) {
-            res.status(404).json({ error: "Casino game fetch results URL not found.", name: req.params.name });
-            return;
-        }
+        const duration = Number(req.query.duration) || 6;
+        const now = new Date();
+        const durationDate = new Date(now.getTime() - duration * 60 * 60 * 1000);
 
-        const params = new URLSearchParams({
-            size: "10",
-            page: "0",
-            sort: "data.settledAt,desc"
+        // Fetch latest results from database
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: durationDate
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            },
+            take: 10
         });
 
-        const URL = `${game.fetch_results_url}?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
+        // Transform results to match the expected format
+        const transformedResults = results.map((result: any) => transformGameResult(result));
 
-        res.json(response.data);
+        res.json(transformedResults);
     } catch (error) {
         console.error("Error fetching casino game results:", error);
         res.status(500).json({ error: "Failed to fetch casino game results." });
@@ -609,18 +649,29 @@ GamesRouter.get("/games/name/:name/stats", async (req: Request, res: Response) =
             return;
         }
 
-        const params = new URLSearchParams({
-            sort: "hotFrequency"
+        const durationHours = req.query.duration ? Number(req.query.duration) : undefined;
+        const now = new Date();
+        const duration = durationHours ? new Date(now.getTime() - durationHours * 60 * 60 * 1000) : new Date(0);
+
+        // Fetch all game results
+        const results = await prisma.gameResult.findMany({
+            where: {
+                casino_game_id: game.id,
+                settled_at: {
+                    gte: duration
+                }
+            },
+            orderBy: {
+                settled_at: "desc"
+            }
         });
 
-        const URL = `${CASINO_SCORE_GAME_EVENTS_BASE_URL}/${game.api_name}/stats?${params.toString()}`;
-        const casinoAxios = createBrightDataAxiosInstance();
-        const response = await casinoAxios.get(URL);
+        const stats = aggregateGameStats(results);
 
-        res.json(response.data);
+        res.json(stats);
     } catch (error) {
-        console.error("Error fetching casino game stats:", error);
-        res.status(500).json({ error: "Failed to fetch casino game stats." });
+        console.error("Error aggregating casino game stats:", error);
+        res.status(500).json({ error: "Failed to aggregate casino game stats." });
     }
 });
 
